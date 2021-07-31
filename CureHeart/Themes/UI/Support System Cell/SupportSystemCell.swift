@@ -13,5 +13,6 @@ class SupportSystemCell: UITableViewCell {
     @IBOutlet weak var SupportSystemCell_ImageView: UIImageView!
     @IBOutlet weak var SupportSystemCell_LabelName: UILabel!
     @IBOutlet weak var SupportSystemCell_LabelDescription: UILabel!
+    @IBOutlet weak var BackgroundSupportSystemCell: UIView!
     
 }

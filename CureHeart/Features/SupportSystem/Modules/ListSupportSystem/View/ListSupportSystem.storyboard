@@ -33,29 +33,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="128" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dzX-z8-iDX">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="27" y="166" width="360" height="647"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="360" id="OTN-GS-7Hf"/>
+                                </constraints>
                             </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="LNV-CL-DNv">
+                                <rect key="frame" x="35.5" y="104" width="343" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="FJT-Pl-Wlj"/>
+                                    <constraint firstAttribute="width" constant="343" id="oD1-q0-sjO"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Mental Health"/>
+                                    <segment title="Organizations"/>
+                                </segments>
+                                <connections>
+                                    <action selector="didSelectOnSegmentedControl_SupportSystem:" destination="Y6W-OH-hqX" eventType="valueChanged" id="3jn-cT-CxJ"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="dzX-z8-iDX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="4pY-Fp-Zde"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="dzX-z8-iDX" secondAttribute="bottom" id="Tiq-dR-UDb"/>
-                            <constraint firstItem="dzX-z8-iDX" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="mOb-dj-o5p"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dzX-z8-iDX" secondAttribute="trailing" id="nvp-9X-3Qt"/>
+                            <constraint firstItem="LNV-CL-DNv" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="1GD-Xy-ERL"/>
+                            <constraint firstItem="dzX-z8-iDX" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="3gL-N9-2sh"/>
+                            <constraint firstItem="LNV-CL-DNv" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="GY5-KL-HWz"/>
+                            <constraint firstItem="dzX-z8-iDX" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="JEN-OQ-Gns"/>
+                            <constraint firstItem="dzX-z8-iDX" firstAttribute="top" secondItem="LNV-CL-DNv" secondAttribute="bottom" constant="30" id="ier-Wb-WQ8"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Support System" image="heart.circle" catalog="system" id="olB-Zl-3Xb"/>
                     <navigationItem key="navigationItem" title="Your Support System" id="DnS-R2-V0D"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="SegmentedControl_SupportSystem" destination="LNV-CL-DNv" id="FVu-Gl-Npx"/>
                         <outlet property="TV_SupportSystem" destination="dzX-z8-iDX" id="65Q-i5-n7Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="113"/>
+            <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
         </scene>
     </scenes>
     <resources>
