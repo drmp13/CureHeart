@@ -26,4 +26,11 @@ class ListSupportSystemViewController: UIViewController {
     @IBAction func didSelectOnSegmentedControl_SupportSystem(_ sender: Any) {
         TV_SupportSystem.reloadData()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SegueToDetailPage" {
+            let dest = segue.destination as! DetailSupportSystemViewController
+            dest.nama = "Halo"
+        }
+    }
 }

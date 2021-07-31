@@ -70,11 +70,22 @@
                     <connections>
                         <outlet property="SegmentedControl_SupportSystem" destination="LNV-CL-DNv" id="FVu-Gl-Npx"/>
                         <outlet property="TV_SupportSystem" destination="dzX-z8-iDX" id="65Q-i5-n7Q"/>
+                        <segue destination="qoJ-xM-rcj" kind="show" identifier="SegueToDetailPage" id="Crl-jo-xId"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
+        </scene>
+        <!--DetailSupportSystem-->
+        <scene sceneID="PN9-jg-Ebt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DetailSupportSystem" id="qoJ-xM-rcj" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="sXQ-Eb-lSr"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mHh-Uy-qej" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="703" y="113"/>
         </scene>
     </scenes>
     <resources>
