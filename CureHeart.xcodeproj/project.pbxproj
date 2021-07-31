@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		005BF04426B295FD00618C3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 005BF04326B295FD00618C3A /* Main.storyboard */; };
 		005BF05026B2988000618C3A /* ListSupportSystem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 005BF04F26B2988000618C3A /* ListSupportSystem.storyboard */; };
+		005BF05226B29D0700618C3A /* ListSupportSystemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005BF05126B29D0700618C3A /* ListSupportSystemViewController.swift */; };
+		005BF05626B2A76900618C3A /* SupportSystemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005BF05426B2A76900618C3A /* SupportSystemCell.swift */; };
+		005BF05726B2A76900618C3A /* SupportSystemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 005BF05526B2A76900618C3A /* SupportSystemCell.xib */; };
+		005BF05926B2ABA800618C3A /* ListSupportSystemViewController+TableViewDataSource+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005BF05826B2ABA800618C3A /* ListSupportSystemViewController+TableViewDataSource+TableViewDelegate.swift */; };
 		96121EB526B29199005B57E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96121EB426B29199005B57E7 /* AppDelegate.swift */; };
 		96121EB726B29199005B57E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96121EB626B29199005B57E7 /* SceneDelegate.swift */; };
 		96121EBF26B29199005B57E7 /* CureHeart.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 96121EBD26B29199005B57E7 /* CureHeart.xcdatamodeld */; };
@@ -19,6 +23,10 @@
 /* Begin PBXFileReference section */
 		005BF04326B295FD00618C3A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		005BF04F26B2988000618C3A /* ListSupportSystem.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListSupportSystem.storyboard; sourceTree = "<group>"; };
+		005BF05126B29D0700618C3A /* ListSupportSystemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSupportSystemViewController.swift; sourceTree = "<group>"; };
+		005BF05426B2A76900618C3A /* SupportSystemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportSystemCell.swift; sourceTree = "<group>"; };
+		005BF05526B2A76900618C3A /* SupportSystemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SupportSystemCell.xib; sourceTree = "<group>"; };
+		005BF05826B2ABA800618C3A /* ListSupportSystemViewController+TableViewDataSource+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListSupportSystemViewController+TableViewDataSource+TableViewDelegate.swift"; sourceTree = "<group>"; };
 		96121EB126B29199005B57E7 /* CureHeart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CureHeart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96121EB426B29199005B57E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96121EB626B29199005B57E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +92,7 @@
 		005BF04126B2952100618C3A /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				005BF05326B2A72300618C3A /* Support System Cell */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -162,8 +171,19 @@
 		005BF04E26B2970100618C3A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				005BF05126B29D0700618C3A /* ListSupportSystemViewController.swift */,
+				005BF05826B2ABA800618C3A /* ListSupportSystemViewController+TableViewDataSource+TableViewDelegate.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		005BF05326B2A72300618C3A /* Support System Cell */ = {
+			isa = PBXGroup;
+			children = (
+				005BF05426B2A76900618C3A /* SupportSystemCell.swift */,
+				005BF05526B2A76900618C3A /* SupportSystemCell.xib */,
+			);
+			path = "Support System Cell";
 			sourceTree = "<group>";
 		};
 		96121EA826B29198005B57E7 = {
@@ -256,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				005BF04426B295FD00618C3A /* Main.storyboard in Resources */,
+				005BF05726B2A76900618C3A /* SupportSystemCell.xib in Resources */,
 				005BF05026B2988000618C3A /* ListSupportSystem.storyboard in Resources */,
 				96121EC426B29199005B57E7 /* LaunchScreen.storyboard in Resources */,
 				96121EC126B29199005B57E7 /* Assets.xcassets in Resources */,
@@ -270,8 +291,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				96121EBF26B29199005B57E7 /* CureHeart.xcdatamodeld in Sources */,
+				005BF05926B2ABA800618C3A /* ListSupportSystemViewController+TableViewDataSource+TableViewDelegate.swift in Sources */,
+				005BF05226B29D0700618C3A /* ListSupportSystemViewController.swift in Sources */,
 				96121EB526B29199005B57E7 /* AppDelegate.swift in Sources */,
 				96121EB726B29199005B57E7 /* SceneDelegate.swift in Sources */,
+				005BF05626B2A76900618C3A /* SupportSystemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
