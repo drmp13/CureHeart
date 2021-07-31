@@ -56,5 +56,7 @@ extension ListSupportSystemViewController: UITableViewDataSource {
 }
 
 extension ListSupportSystemViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "SegueToDetailPage", sender: self)
+    }
 }
