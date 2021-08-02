@@ -13,6 +13,7 @@
 		005BF05626B2A76900618C3A /* SupportSystemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005BF05426B2A76900618C3A /* SupportSystemCell.swift */; };
 		005BF05726B2A76900618C3A /* SupportSystemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 005BF05526B2A76900618C3A /* SupportSystemCell.xib */; };
 		005BF05926B2ABA800618C3A /* ListSupportSystemViewController+TableViewDataSource+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005BF05826B2ABA800618C3A /* ListSupportSystemViewController+TableViewDataSource+TableViewDelegate.swift */; };
+		00B5111826B7D1D100F44394 /* FetchSupportSystemData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B5111726B7D1D100F44394 /* FetchSupportSystemData.swift */; };
 		00FA70E326B562EF004D6DD3 /* DetailSupportSystem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00FA70E226B562EF004D6DD3 /* DetailSupportSystem.storyboard */; };
 		00FA70E526B56313004D6DD3 /* DetailSupportSystemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FA70E426B56313004D6DD3 /* DetailSupportSystemViewController.swift */; };
 		96121EB526B29199005B57E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96121EB426B29199005B57E7 /* AppDelegate.swift */; };
@@ -29,6 +30,7 @@
 		005BF05426B2A76900618C3A /* SupportSystemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportSystemCell.swift; sourceTree = "<group>"; };
 		005BF05526B2A76900618C3A /* SupportSystemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SupportSystemCell.xib; sourceTree = "<group>"; };
 		005BF05826B2ABA800618C3A /* ListSupportSystemViewController+TableViewDataSource+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListSupportSystemViewController+TableViewDataSource+TableViewDelegate.swift"; sourceTree = "<group>"; };
+		00B5111726B7D1D100F44394 /* FetchSupportSystemData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchSupportSystemData.swift; sourceTree = "<group>"; };
 		00FA70E226B562EF004D6DD3 /* DetailSupportSystem.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailSupportSystem.storyboard; sourceTree = "<group>"; };
 		00FA70E426B56313004D6DD3 /* DetailSupportSystemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSupportSystemViewController.swift; sourceTree = "<group>"; };
 		96121EB126B29199005B57E7 /* CureHeart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CureHeart.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +75,7 @@
 		005BF03E26B2949D00618C3A /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				00B5111726B7D1D100F44394 /* FetchSupportSystemData.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				005BF05926B2ABA800618C3A /* ListSupportSystemViewController+TableViewDataSource+TableViewDelegate.swift in Sources */,
 				005BF05226B29D0700618C3A /* ListSupportSystemViewController.swift in Sources */,
 				96121EB526B29199005B57E7 /* AppDelegate.swift in Sources */,
+				00B5111826B7D1D100F44394 /* FetchSupportSystemData.swift in Sources */,
 				96121EB726B29199005B57E7 /* SceneDelegate.swift in Sources */,
 				005BF05626B2A76900618C3A /* SupportSystemCell.swift in Sources */,
 			);
@@ -467,12 +471,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P74487TWS7;
 				INFOPLIST_FILE = CureHeart/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.drmp.test.CureHeart;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kendraarsena.test.CureHeart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -485,12 +490,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P74487TWS7;
 				INFOPLIST_FILE = CureHeart/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.drmp.test.CureHeart;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kendraarsena.test.CureHeart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
