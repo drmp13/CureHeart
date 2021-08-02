@@ -18,13 +18,13 @@ extension ListSupportSystemViewController: UITableViewDataSource {
         if SegmentedControl_SupportSystem.selectedSegmentIndex == 0 {
             // ISI DATA MENTAL HEALTH
             cell.SupportSystemCell_ImageView.image = UIImage(named: "noimage")
-            cell.SupportSystemCell_LabelName.text = "Hanania Consulting"
-            cell.SupportSystemCell_LabelDescription.text = "Tempat konsultasi punya Hanania"
+            cell.SupportSystemCell_LabelName.text = dataPsikolog["\(indexPath.section)"]?.name
+            cell.SupportSystemCell_LabelDescription.text = dataPsikolog["\(indexPath.section)"]?.description
         } else {
             // ISI DATA ORGANIZATION
             cell.SupportSystemCell_ImageView.image = UIImage(named: "noimage")
-            cell.SupportSystemCell_LabelName.text = "Awas KBGO"
-            cell.SupportSystemCell_LabelDescription.text = "Lembaga bantuan hukum"
+            cell.SupportSystemCell_LabelName.text = dataOrganisasi["\(indexPath.section)"]?.name
+            cell.SupportSystemCell_LabelDescription.text = dataOrganisasi["\(indexPath.section)"]?.description
         }
         cell.BackgroundSupportSystemCell.layer.cornerRadius = 20
         cell.BackgroundSupportSystemCell.layer.masksToBounds = false
@@ -37,7 +37,11 @@ extension ListSupportSystemViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         // JUMLAH DATA
-        return 20
+        if SegmentedControl_SupportSystem.selectedSegmentIndex == 0 {
+            return dataPsikolog.count
+        } else {
+            return dataOrganisasi.count
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
@@ -57,6 +61,7 @@ extension ListSupportSystemViewController: UITableViewDataSource {
 
 extension ListSupportSystemViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        currentIndexpath = indexPath.section
         performSegue(withIdentifier: "SegueToDetailPage", sender: self)
     }
 }
