@@ -25,26 +25,26 @@
                                 <color key="backgroundColor" red="0.50588235290000005" green="0.62745098040000002" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SxN-9m-C8U">
-                                <rect key="frame" x="10" y="24" width="80" height="80"/>
+                                <rect key="frame" x="16" y="24" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="Ecc-RP-8ej"/>
                                     <constraint firstAttribute="width" constant="80" id="dmQ-Pu-06M"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X6Y-aY-HUO">
-                                <rect key="frame" x="100" y="16" width="252" height="17"/>
+                                <rect key="frame" x="106" y="16" width="240" height="17"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="252" id="XqO-Ti-1gU"/>
+                                    <constraint firstAttribute="width" constant="240" id="XqO-Ti-1gU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLc-aJ-vYl">
-                                <rect key="frame" x="100" y="38" width="252" height="13.5"/>
+                                <rect key="frame" x="106" y="38" width="240" height="13.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="252" id="9Gz-QV-ycB"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="62" id="Wmz-Kj-wEg"/>
+                                    <constraint firstAttribute="width" constant="240" id="9Gz-QV-ycB"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="72" id="Wmz-Kj-wEg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -56,7 +56,7 @@
                             <constraint firstAttribute="bottom" secondItem="SxN-9m-C8U" secondAttribute="bottom" constant="24" id="DDa-Al-tEI"/>
                             <constraint firstItem="X6Y-aY-HUO" firstAttribute="leading" secondItem="SxN-9m-C8U" secondAttribute="trailing" constant="10" id="FOM-3i-WMi"/>
                             <constraint firstItem="aLc-aJ-vYl" firstAttribute="top" secondItem="X6Y-aY-HUO" secondAttribute="bottom" constant="5" id="QhE-kL-dgz"/>
-                            <constraint firstItem="SxN-9m-C8U" firstAttribute="leading" secondItem="7XS-hT-pHp" secondAttribute="leading" constant="10" id="ahg-gY-Zod"/>
+                            <constraint firstItem="SxN-9m-C8U" firstAttribute="leading" secondItem="7XS-hT-pHp" secondAttribute="leading" constant="16" id="ahg-gY-Zod"/>
                             <constraint firstItem="X6Y-aY-HUO" firstAttribute="top" secondItem="7XS-hT-pHp" secondAttribute="top" constant="16" id="hh2-5I-aBx"/>
                             <constraint firstItem="aLc-aJ-vYl" firstAttribute="leading" secondItem="SxN-9m-C8U" secondAttribute="trailing" constant="10" id="uZL-EH-D1j"/>
                         </constraints>

@@ -32,7 +32,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="128" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dzX-z8-iDX">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="136" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dzX-z8-iDX">
                                 <rect key="frame" x="27" y="166" width="360" height="647"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -64,7 +64,7 @@
                             <constraint firstItem="dzX-z8-iDX" firstAttribute="top" secondItem="LNV-CL-DNv" secondAttribute="bottom" constant="30" id="ier-Wb-WQ8"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Support System" image="heart.circle" catalog="system" id="olB-Zl-3Xb"/>
+                    <tabBarItem key="tabBarItem" title="Support System" image="heart.circle" catalog="system" selectedImage="heart.circle.fill" id="olB-Zl-3Xb"/>
                     <navigationItem key="navigationItem" title="Your Support System" id="DnS-R2-V0D"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -90,6 +90,7 @@
     </scenes>
     <resources>
         <image name="heart.circle" catalog="system" width="128" height="121"/>
+        <image name="heart.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
