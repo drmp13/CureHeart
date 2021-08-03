@@ -28,6 +28,12 @@ extension ListSupportSystemViewController: UITableViewDataSource {
         }
         cell.BackgroundSupportSystemCell.layer.cornerRadius = 20
         cell.BackgroundSupportSystemCell.layer.masksToBounds = false
+        cell.BackgroundSupportSystemCell.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        cell.BackgroundSupportSystemCell.layer.shadowOpacity = 0.3
+        cell.BackgroundSupportSystemCell.layer.shadowOffset = CGSize(width: 0, height: 3)
+        cell.BackgroundSupportSystemCell.layer.shadowRadius = 2
+        cell.BackgroundSupportSystemCell.layer.shouldRasterize = true
+        cell.BackgroundSupportSystemCell.layer.rasterizationScale = UIScreen.main.scale
         return cell
     }
     
@@ -45,16 +51,12 @@ extension ListSupportSystemViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 10
+        return 5
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let footerView = UIView(frame: CGRect(x: 60, y: 0, width: tableView.frame.width - 60, height: 0.5))
         footerView.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-//        let gradient = CAGradientLayer()
-//        gradient.frame = footerView.bounds
-//        gradient.colors = [UIColor.black.cgColor, UIColor.gray.cgColor]
-//        footerView.layer.insertSublayer(gradient, at: 0)
         return footerView
     }
 }

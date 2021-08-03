@@ -33,6 +33,7 @@ class ListSupportSystemViewController: UIViewController {
         FetchSupportSystemData().fetchAll(type: "org"){ datas in
             self.dataOrganisasi = datas.data
         }
+        
     }
     
     @IBAction func didSelectOnSegmentedControl_SupportSystem(_ sender: Any) {
