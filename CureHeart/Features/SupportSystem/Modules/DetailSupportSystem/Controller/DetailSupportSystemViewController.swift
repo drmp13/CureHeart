@@ -45,10 +45,10 @@ class DetailSupportSystemViewController: UIViewController {
     func setUI() {
         label_nama.text = detailData["\(index)"]?.name
         label_deskripsi.text = detailData["\(index)"]?.description
-        for i in 0...(detailData["\(index)"]?.services.count)! {
+        for i in 0..<(detailData["\(index)"]?.services.count)! {
             label_list_layanan.text = detailData["\(index)"]?.services[i].value
         }
-        for i in 0...(detailData["\(index)"]?.schedules.count)! {
+        for i in 0..<(detailData["\(index)"]?.schedules.count)! {
             label_hari_layanan.text = detailData["\(index)"]?.schedules[i].value
         }
         label_alamat.text = detailData["\(index)"]?.address
