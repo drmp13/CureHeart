@@ -18,9 +18,33 @@
 		00FA70E526B56313004D6DD3 /* DetailSupportSystemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FA70E426B56313004D6DD3 /* DetailSupportSystemViewController.swift */; };
 		96121EB526B29199005B57E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96121EB426B29199005B57E7 /* AppDelegate.swift */; };
 		96121EB726B29199005B57E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96121EB626B29199005B57E7 /* SceneDelegate.swift */; };
-		96121EBF26B29199005B57E7 /* CureHeart.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 96121EBD26B29199005B57E7 /* CureHeart.xcdatamodeld */; };
 		96121EC126B29199005B57E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96121EC026B29199005B57E7 /* Assets.xcassets */; };
 		96121EC426B29199005B57E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96121EC226B29199005B57E7 /* LaunchScreen.storyboard */; };
+		9640AC5926B69A8B00AE205F /* CureHeart.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9640AC5726B69A8B00AE205F /* CureHeart.xcdatamodeld */; };
+		9640AC5C26B6A09600AE205F /* RecordingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9640AC5B26B6A09600AE205F /* RecordingModel.swift */; };
+		9640AC5E26B6A0B900AE205F /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9640AC5D26B6A0B900AE205F /* Response.swift */; };
+		9640AC6126B6A10900AE205F /* DateTimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9640AC6026B6A10900AE205F /* DateTimeHelper.swift */; };
+		9640AC6326B6A2B400AE205F /* FolderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9640AC6226B6A2B400AE205F /* FolderModel.swift */; };
+		9640AC6626B6A5BE00AE205F /* FolderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9640AC6426B6A5BE00AE205F /* FolderCell.swift */; };
+		9640AC6726B6A5BE00AE205F /* FolderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9640AC6526B6A5BE00AE205F /* FolderCell.xib */; };
+		9684042F26B4284C00FA0A58 /* Recording.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9684042E26B4284C00FA0A58 /* Recording.storyboard */; };
+		9684043126B4291D00FA0A58 /* RecordingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9684043026B4291D00FA0A58 /* RecordingController.swift */; };
+		9684043426B42B4200FA0A58 /* AGManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9684043326B42B4200FA0A58 /* AGManager.swift */; };
+		9684043626B42B9F00FA0A58 /* AGAudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9684043526B42B9F00FA0A58 /* AGAudioRecorder.swift */; };
+		9684043826B42BB700FA0A58 /* AGAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9684043726B42BB700FA0A58 /* AGAudioPlayer.swift */; };
+		9684043A26B42BCE00FA0A58 /* AGFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9684043926B42BCE00FA0A58 /* AGFileManager.swift */; };
+		9684043E26B5619600FA0A58 /* SafePlace.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9684043D26B5619600FA0A58 /* SafePlace.storyboard */; };
+		9699B98326B9347F00F83A4A /* PathHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9699B98226B9347F00F83A4A /* PathHelper.swift */; };
+		96A4BAAE26B6A9C900727880 /* UITableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A4BAAD26B6A9C900727880 /* UITableHelper.swift */; };
+		96A4BAB026B6AA0B00727880 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A4BAAF26B6AA0B00727880 /* AlertHelper.swift */; };
+		96A4BAB626B6ABCF00727880 /* SafePlaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A4BAB526B6ABCF00727880 /* SafePlaceController.swift */; };
+		96A4BAB826B7E4B600727880 /* SaveRecording.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96A4BAB726B7E4B600727880 /* SaveRecording.storyboard */; };
+		96A4BABA26B7E4C700727880 /* SaveRecordingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A4BAB926B7E4C700727880 /* SaveRecordingController.swift */; };
+		96F9963F26B82C6D00877D5B /* StringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F9963E26B82C6D00877D5B /* StringHelper.swift */; };
+		96F9964126B8C3C800877D5B /* RecordingList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96F9964026B8C3C800877D5B /* RecordingList.storyboard */; };
+		96F9964426B8C3F700877D5B /* RecordingListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F9964226B8C3F700877D5B /* RecordingListTVC.swift */; };
+		96F9964526B8C3F700877D5B /* RecordingListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96F9964326B8C3F700877D5B /* RecordingListTVC.xib */; };
+		96F9964726B8CB6100877D5B /* RecordingListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F9964626B8CB6100877D5B /* RecordingListController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,10 +60,34 @@
 		96121EB126B29199005B57E7 /* CureHeart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CureHeart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96121EB426B29199005B57E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96121EB626B29199005B57E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		96121EBE26B29199005B57E7 /* CureHeart.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CureHeart.xcdatamodel; sourceTree = "<group>"; };
 		96121EC026B29199005B57E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96121EC326B29199005B57E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96121EC526B29199005B57E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9640AC5826B69A8B00AE205F /* RecordingModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RecordingModel.xcdatamodel; sourceTree = "<group>"; };
+		9640AC5B26B6A09600AE205F /* RecordingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingModel.swift; sourceTree = "<group>"; };
+		9640AC5D26B6A0B900AE205F /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		9640AC6026B6A10900AE205F /* DateTimeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeHelper.swift; sourceTree = "<group>"; };
+		9640AC6226B6A2B400AE205F /* FolderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderModel.swift; sourceTree = "<group>"; };
+		9640AC6426B6A5BE00AE205F /* FolderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderCell.swift; sourceTree = "<group>"; };
+		9640AC6526B6A5BE00AE205F /* FolderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FolderCell.xib; sourceTree = "<group>"; };
+		9684042E26B4284C00FA0A58 /* Recording.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recording.storyboard; sourceTree = "<group>"; };
+		9684043026B4291D00FA0A58 /* RecordingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingController.swift; sourceTree = "<group>"; };
+		9684043326B42B4200FA0A58 /* AGManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGManager.swift; sourceTree = "<group>"; };
+		9684043526B42B9F00FA0A58 /* AGAudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGAudioRecorder.swift; sourceTree = "<group>"; };
+		9684043726B42BB700FA0A58 /* AGAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGAudioPlayer.swift; sourceTree = "<group>"; };
+		9684043926B42BCE00FA0A58 /* AGFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGFileManager.swift; sourceTree = "<group>"; };
+		9684043D26B5619600FA0A58 /* SafePlace.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SafePlace.storyboard; sourceTree = "<group>"; };
+		9699B98226B9347F00F83A4A /* PathHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathHelper.swift; sourceTree = "<group>"; };
+		96A4BAAD26B6A9C900727880 /* UITableHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableHelper.swift; sourceTree = "<group>"; };
+		96A4BAAF26B6AA0B00727880 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
+		96A4BAB526B6ABCF00727880 /* SafePlaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafePlaceController.swift; sourceTree = "<group>"; };
+		96A4BAB726B7E4B600727880 /* SaveRecording.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SaveRecording.storyboard; sourceTree = "<group>"; };
+		96A4BAB926B7E4C700727880 /* SaveRecordingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveRecordingController.swift; sourceTree = "<group>"; };
+		96F9963E26B82C6D00877D5B /* StringHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringHelper.swift; sourceTree = "<group>"; };
+		96F9964026B8C3C800877D5B /* RecordingList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecordingList.storyboard; sourceTree = "<group>"; };
+		96F9964226B8C3F700877D5B /* RecordingListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingListTVC.swift; sourceTree = "<group>"; };
+		96F9964326B8C3F700877D5B /* RecordingListTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordingListTVC.xib; sourceTree = "<group>"; };
+		96F9964626B8CB6100877D5B /* RecordingListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingListController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +113,7 @@
 		005BF03D26B2948000618C3A /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				005BF04526B2964900618C3A /* SafePlace */,
+				9684042926B4269D00FA0A58 /* SafePlace */,
 				005BF04826B2967200618C3A /* SupportSystem */,
 				005BF04326B295FD00618C3A /* Main.storyboard */,
 			);
@@ -111,22 +159,6 @@
 			path = Colors;
 			sourceTree = "<group>";
 		};
-		005BF04526B2964900618C3A /* SafePlace */ = {
-			isa = PBXGroup;
-			children = (
-				005BF04B26B296D200618C3A /* Modules */,
-				005BF04626B2965300618C3A /* Model */,
-			);
-			path = SafePlace;
-			sourceTree = "<group>";
-		};
-		005BF04626B2965300618C3A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		005BF04826B2967200618C3A /* SupportSystem */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,13 +180,6 @@
 			children = (
 				00FA70DF26B562D4004D6DD3 /* DetailSupportSystem */,
 				005BF04C26B296DE00618C3A /* ListSupportSystem */,
-			);
-			path = Modules;
-			sourceTree = "<group>";
-		};
-		005BF04B26B296D200618C3A /* Modules */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -238,17 +263,128 @@
 		96121EB326B29199005B57E7 /* CureHeart */ = {
 			isa = PBXGroup;
 			children = (
+				9640AC5F26B6A0F800AE205F /* Helper */,
 				005BF03C26B2945000618C3A /* Application */,
 				005BF03D26B2948000618C3A /* Features */,
+				9640AC5A26B6A06A00AE205F /* Model */,
 				005BF03E26B2949D00618C3A /* Helper */,
 				005BF03F26B294A600618C3A /* Themes */,
 				005BF04026B294AC00618C3A /* Utilities */,
 				96121EC026B29199005B57E7 /* Assets.xcassets */,
 				96121EC226B29199005B57E7 /* LaunchScreen.storyboard */,
 				96121EC526B29199005B57E7 /* Info.plist */,
-				96121EBD26B29199005B57E7 /* CureHeart.xcdatamodeld */,
 			);
 			path = CureHeart;
+			sourceTree = "<group>";
+		};
+		9640AC5A26B6A06A00AE205F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9640AC5D26B6A0B900AE205F /* Response.swift */,
+				9640AC5B26B6A09600AE205F /* RecordingModel.swift */,
+				9640AC6226B6A2B400AE205F /* FolderModel.swift */,
+				9640AC5726B69A8B00AE205F /* CureHeart.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9640AC5F26B6A0F800AE205F /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				9640AC6026B6A10900AE205F /* DateTimeHelper.swift */,
+				96A4BAAD26B6A9C900727880 /* UITableHelper.swift */,
+				96A4BAAF26B6AA0B00727880 /* AlertHelper.swift */,
+				96F9963E26B82C6D00877D5B /* StringHelper.swift */,
+				9699B98226B9347F00F83A4A /* PathHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		9640AC6826B6A70800AE205F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9640AC6426B6A5BE00AE205F /* FolderCell.swift */,
+				96A4BAB526B6ABCF00727880 /* SafePlaceController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9684042926B4269D00FA0A58 /* SafePlace */ = {
+			isa = PBXGroup;
+			children = (
+				9684042B26B426AE00FA0A58 /* Modules */,
+			);
+			path = SafePlace;
+			sourceTree = "<group>";
+		};
+		9684042A26B426A300FA0A58 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9684043026B4291D00FA0A58 /* RecordingController.swift */,
+				96A4BAB926B7E4C700727880 /* SaveRecordingController.swift */,
+				96F9964226B8C3F700877D5B /* RecordingListTVC.swift */,
+				96F9964626B8CB6100877D5B /* RecordingListController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9684042B26B426AE00FA0A58 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				9684043B26B5617A00FA0A58 /* SafePlace */,
+				9684042C26B426B700FA0A58 /* Recording */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		9684042C26B426B700FA0A58 /* Recording */ = {
+			isa = PBXGroup;
+			children = (
+				9684043226B42B2300FA0A58 /* Ext */,
+				9684042D26B426CB00FA0A58 /* View */,
+				9684042A26B426A300FA0A58 /* Controller */,
+			);
+			path = Recording;
+			sourceTree = "<group>";
+		};
+		9684042D26B426CB00FA0A58 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9684042E26B4284C00FA0A58 /* Recording.storyboard */,
+				96A4BAB726B7E4B600727880 /* SaveRecording.storyboard */,
+				96F9964026B8C3C800877D5B /* RecordingList.storyboard */,
+				96F9964326B8C3F700877D5B /* RecordingListTVC.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9684043226B42B2300FA0A58 /* Ext */ = {
+			isa = PBXGroup;
+			children = (
+				9684043326B42B4200FA0A58 /* AGManager.swift */,
+				9684043526B42B9F00FA0A58 /* AGAudioRecorder.swift */,
+				9684043726B42BB700FA0A58 /* AGAudioPlayer.swift */,
+				9684043926B42BCE00FA0A58 /* AGFileManager.swift */,
+			);
+			path = Ext;
+			sourceTree = "<group>";
+		};
+		9684043B26B5617A00FA0A58 /* SafePlace */ = {
+			isa = PBXGroup;
+			children = (
+				9640AC6826B6A70800AE205F /* Controller */,
+				9684043C26B5618600FA0A58 /* View */,
+			);
+			path = SafePlace;
+			sourceTree = "<group>";
+		};
+		9684043C26B5618600FA0A58 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9684043D26B5619600FA0A58 /* SafePlace.storyboard */,
+				9640AC6526B6A5BE00AE205F /* FolderCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,7 +446,13 @@
 			files = (
 				005BF04426B295FD00618C3A /* Main.storyboard in Resources */,
 				005BF05726B2A76900618C3A /* SupportSystemCell.xib in Resources */,
+				9684043E26B5619600FA0A58 /* SafePlace.storyboard in Resources */,
+				9684042F26B4284C00FA0A58 /* Recording.storyboard in Resources */,
+				96F9964126B8C3C800877D5B /* RecordingList.storyboard in Resources */,
+				96F9964526B8C3F700877D5B /* RecordingListTVC.xib in Resources */,
 				005BF05026B2988000618C3A /* ListSupportSystem.storyboard in Resources */,
+				96A4BAB826B7E4B600727880 /* SaveRecording.storyboard in Resources */,
+				9640AC6726B6A5BE00AE205F /* FolderCell.xib in Resources */,
 				96121EC426B29199005B57E7 /* LaunchScreen.storyboard in Resources */,
 				00FA70E326B562EF004D6DD3 /* DetailSupportSystem.storyboard in Resources */,
 				96121EC126B29199005B57E7 /* Assets.xcassets in Resources */,
@@ -324,12 +466,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00FA70E526B56313004D6DD3 /* DetailSupportSystemViewController.swift in Sources */,
-				96121EBF26B29199005B57E7 /* CureHeart.xcdatamodeld in Sources */,
+				9699B98326B9347F00F83A4A /* PathHelper.swift in Sources */,
+				9684043826B42BB700FA0A58 /* AGAudioPlayer.swift in Sources */,
+				9640AC6626B6A5BE00AE205F /* FolderCell.swift in Sources */,
 				005BF05926B2ABA800618C3A /* ListSupportSystemViewController+TableViewDataSource+TableViewDelegate.swift in Sources */,
 				005BF05226B29D0700618C3A /* ListSupportSystemViewController.swift in Sources */,
+				96A4BABA26B7E4C700727880 /* SaveRecordingController.swift in Sources */,
+				96A4BAB626B6ABCF00727880 /* SafePlaceController.swift in Sources */,
+				9684043126B4291D00FA0A58 /* RecordingController.swift in Sources */,
+				96F9964426B8C3F700877D5B /* RecordingListTVC.swift in Sources */,
+				00FA70E526B56313004D6DD3 /* DetailSupportSystemViewController.swift in Sources */,
+				96121EBF26B29199005B57E7 /* CureHeart.xcdatamodeld in Sources */,
 				96121EB526B29199005B57E7 /* AppDelegate.swift in Sources */,
 				00B5111826B7D1D100F44394 /* FetchSupportSystemData.swift in Sources */,
+				96A4BAB026B6AA0B00727880 /* AlertHelper.swift in Sources */,
+				9640AC5E26B6A0B900AE205F /* Response.swift in Sources */,
+				9684043626B42B9F00FA0A58 /* AGAudioRecorder.swift in Sources */,
+				9684043426B42B4200FA0A58 /* AGManager.swift in Sources */,
+				9640AC6326B6A2B400AE205F /* FolderModel.swift in Sources */,
+				9684043A26B42BCE00FA0A58 /* AGFileManager.swift in Sources */,
+				96A4BAAE26B6A9C900727880 /* UITableHelper.swift in Sources */,
+				9640AC6126B6A10900AE205F /* DateTimeHelper.swift in Sources */,
+				9640AC5926B69A8B00AE205F /* CureHeart.xcdatamodeld in Sources */,
+				96F9964726B8CB6100877D5B /* RecordingListController.swift in Sources */,
+				9640AC5C26B6A09600AE205F /* RecordingModel.swift in Sources */,
+				96F9963F26B82C6D00877D5B /* StringHelper.swift in Sources */,
 				96121EB726B29199005B57E7 /* SceneDelegate.swift in Sources */,
 				005BF05626B2A76900618C3A /* SupportSystemCell.swift in Sources */,
 			);
@@ -471,7 +632,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P74487TWS7;
+				DEVELOPMENT_TEAM = AQ243C2X36;
 				INFOPLIST_FILE = CureHeart/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -490,7 +651,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P74487TWS7;
+				DEVELOPMENT_TEAM = AQ243C2X36;
 				INFOPLIST_FILE = CureHeart/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -527,12 +688,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		96121EBD26B29199005B57E7 /* CureHeart.xcdatamodeld */ = {
+		9640AC5726B69A8B00AE205F /* CureHeart.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				96121EBE26B29199005B57E7 /* CureHeart.xcdatamodel */,
+				9640AC5826B69A8B00AE205F /* RecordingModel.xcdatamodel */,
 			);
-			currentVersion = 96121EBE26B29199005B57E7 /* CureHeart.xcdatamodel */;
+			currentVersion = 9640AC5826B69A8B00AE205F /* RecordingModel.xcdatamodel */;
 			path = CureHeart.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Recording List Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="RecordingListController" customModule="CureHeart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DpQ-Nj-YQq">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem id="Rch-Th-N1T">
+                                        <barButtonItem key="leftBarButtonItem" title="Safe Place" image="chevron.left" catalog="system" id="sN4-fn-AF9">
+                                            <connections>
+                                                <action selector="navBarBackPressed:" destination="Y6W-OH-hqX" id="hb0-2i-TDK"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="m7h-9V-IXE">
+                                <rect key="frame" x="0.0" y="202" width="414" height="464"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="464" id="YDk-sq-cWU"/>
+                                </constraints>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lAr-XS-Ysb">
+                                <rect key="frame" x="0.0" y="674" width="414" height="188"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0r-n2-3ic">
+                                        <rect key="frame" x="172" y="59" width="70" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="PNF-2N-mdT"/>
+                                            <constraint firstAttribute="height" constant="70" id="egi-gI-kDc"/>
+                                        </constraints>
+                                        <state key="normal" image="button-audio"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.85490196078431369" green="0.8901960784313725" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="q0r-n2-3ic" firstAttribute="leading" secondItem="lAr-XS-Ysb" secondAttribute="leading" constant="172" id="2D9-q4-LTy"/>
+                                    <constraint firstAttribute="height" constant="188" id="5LD-z3-620"/>
+                                    <constraint firstItem="q0r-n2-3ic" firstAttribute="top" secondItem="lAr-XS-Ysb" secondAttribute="top" constant="59" id="qFb-HT-YKI"/>
+                                    <constraint firstAttribute="width" constant="414" id="s0p-Y7-jhQ"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Safe Place" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bo-Cz-z0H">
+                                <rect key="frame" x="20" y="101" width="203" height="34"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="m7h-9V-IXE" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="01L-xH-gIt"/>
+                            <constraint firstItem="6bo-Cz-z0H" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="60h-eg-0v1"/>
+                            <constraint firstItem="DpQ-Nj-YQq" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="8I1-mK-VFx"/>
+                            <constraint firstItem="lAr-XS-Ysb" firstAttribute="top" secondItem="m7h-9V-IXE" secondAttribute="bottom" constant="8" symbolic="YES" id="8i2-Pl-DUt"/>
+                            <constraint firstItem="6bo-Cz-z0H" firstAttribute="top" secondItem="DpQ-Nj-YQq" secondAttribute="bottom" constant="13" id="9WM-Lp-DH4"/>
+                            <constraint firstItem="lAr-XS-Ysb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Gqy-RR-Zh6"/>
+                            <constraint firstItem="DpQ-Nj-YQq" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="No4-Bv-clk"/>
+                            <constraint firstItem="m7h-9V-IXE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ing-O7-lqG"/>
+                            <constraint firstItem="DpQ-Nj-YQq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="jyS-Yp-1am"/>
+                            <constraint firstItem="lAr-XS-Ysb" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="sRE-cR-Pfo"/>
+                            <constraint firstItem="lAr-XS-Ysb" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="y4Y-DQ-Abt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="labelTitle" destination="6bo-Cz-z0H" id="74N-vT-ixQ"/>
+                        <outlet property="navBar" destination="Rch-Th-N1T" id="IXV-od-BSw"/>
+                        <outlet property="recordingTableView" destination="m7h-9V-IXE" id="PWA-1L-72S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="85.714285714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="button-audio" width="170" height="170"/>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
