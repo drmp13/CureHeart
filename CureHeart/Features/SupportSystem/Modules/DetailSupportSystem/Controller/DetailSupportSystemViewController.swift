@@ -36,43 +36,28 @@ class DetailSupportSystemViewController: UIViewController {
         
         FetchSupportSystemData().fetchAll(type: "\(type)"){ datas in
             self.detailData = datas.data
+            DispatchQueue.main.async {
+                self.setUI()
+            }
         }
-        
-        setUI()
     }
     
     func setUI() {
-        // BELOM GANTI WEIGHT LABEL LAYANAN, WAKTU, dan LOKASI
-//        label_nama.text = nama
-//        label_deskripsi.text = deskripsi
-//        label_list_layanan.text = list_layanan
-//        label_hari_layanan.text = hari_layanan
-//        label_jam_layanan.text = jam_layanan
-//        label_alamat.text = alamat
-        
         label_nama.text = detailData["\(index)"]?.name
         label_deskripsi.text = detailData["\(index)"]?.description
-//        for i in 0...(detailData["\(index)"]?.services.count)! {
-            label_list_layanan.text = detailData["\(index)"]?.services[0].value
-//        }
-//        for i in 0...(detailData["\(index)"]?.schedules.count)! {
-            label_hari_layanan.text = detailData["\(index)"]?.schedules[0].value
-//        }
+        for i in 0...(detailData["\(index)"]?.services.count)! {
+            label_list_layanan.text = detailData["\(index)"]?.services[i].value
+        }
+        for i in 0...(detailData["\(index)"]?.schedules.count)! {
+            label_hari_layanan.text = detailData["\(index)"]?.schedules[i].value
+        }
         label_alamat.text = detailData["\(index)"]?.address
         
         button_contact.layer.cornerRadius = 10
     }
     
     @IBAction func buttonContact_onClick(_ sender: Any) {
-        label_nama.text = detailData["\(index)"]?.name
-        label_deskripsi.text = detailData["\(index)"]?.description
-        for i in 0..<(detailData["\(index)"]?.services.count)! {
-            label_list_layanan.text = detailData["\(index)"]?.services[i].value
-        }
-        for i in 0..<(detailData["\(index)"]?.schedules.count)! {
-            label_hari_layanan.text = detailData["\(index)"]?.schedules[i].value
-        }
-        label_alamat.text = detailData["\(index)"]?.address
+        
     }
     
 }
