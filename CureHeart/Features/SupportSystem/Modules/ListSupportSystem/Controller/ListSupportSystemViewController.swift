@@ -28,6 +28,9 @@ class ListSupportSystemViewController: UIViewController {
         
         FetchSupportSystemData().fetchAll(type: "psi"){ datas in
             self.dataPsikolog = datas.data
+            DispatchQueue.main.async {
+                self.TV_SupportSystem.reloadData()
+            }
         }
         
         FetchSupportSystemData().fetchAll(type: "org"){ datas in
