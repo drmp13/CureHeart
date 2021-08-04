@@ -476,7 +476,6 @@
 				9684043126B4291D00FA0A58 /* RecordingController.swift in Sources */,
 				96F9964426B8C3F700877D5B /* RecordingListTVC.swift in Sources */,
 				00FA70E526B56313004D6DD3 /* DetailSupportSystemViewController.swift in Sources */,
-				96121EBF26B29199005B57E7 /* CureHeart.xcdatamodeld in Sources */,
 				96121EB526B29199005B57E7 /* AppDelegate.swift in Sources */,
 				00B5111826B7D1D100F44394 /* FetchSupportSystemData.swift in Sources */,
 				96A4BAB026B6AA0B00727880 /* AlertHelper.swift in Sources */,
@@ -632,7 +631,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AQ243C2X36;
+				DEVELOPMENT_TEAM = P74487TWS7;
 				INFOPLIST_FILE = CureHeart/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

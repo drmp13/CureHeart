@@ -74,10 +74,11 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hari layanan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbH-fu-AQ3">
-                                                <rect key="frame" x="38" y="305.5" width="356" height="14"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hari layanan" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbH-fu-AQ3">
+                                                <rect key="frame" x="38" y="305.5" width="356" height="13.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="356" id="haN-GJ-LPf"/>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="rrA-9B-Il6"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                 <nil key="textColor"/>
@@ -156,7 +157,7 @@
                                             <constraint firstItem="hEz-y3-aYM" firstAttribute="top" secondItem="Pyq-zh-YEJ" secondAttribute="bottom" constant="18" id="gPw-iY-QE0"/>
                                             <constraint firstItem="oMg-rc-vus" firstAttribute="centerX" secondItem="ey6-MD-btJ" secondAttribute="centerX" id="gcv-53-GRv"/>
                                             <constraint firstAttribute="trailing" secondItem="ITW-SA-uRo" secondAttribute="trailing" constant="20" id="ggE-zv-Y3c"/>
-                                            <constraint firstItem="HLC-4I-t3t" firstAttribute="top" secondItem="Etx-de-pah" secondAttribute="bottom" constant="20" id="hin-Hn-4Te"/>
+                                            <constraint firstItem="HLC-4I-t3t" firstAttribute="top" secondItem="lbH-fu-AQ3" secondAttribute="bottom" constant="22" id="hin-Hn-4Te"/>
                                             <constraint firstItem="pJZ-Wl-JaB" firstAttribute="top" secondItem="ey6-MD-btJ" secondAttribute="top" id="iKV-M7-05s"/>
                                             <constraint firstItem="IFO-Ub-9QL" firstAttribute="leading" secondItem="ey6-MD-btJ" secondAttribute="leading" constant="20" id="j0Z-Sk-KrU"/>
                                             <constraint firstItem="HLC-4I-t3t" firstAttribute="leading" secondItem="ey6-MD-btJ" secondAttribute="leading" constant="20" id="jOm-y3-NQD"/>
