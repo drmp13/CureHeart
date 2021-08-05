@@ -29,7 +29,9 @@ class FetchSupportSystemData: UIViewController {
         let id: String
         let name: String
         let description: String
+        let description_short: String
         let logo: String
+        let website: String
         let type: String
         let address: String
         let phone: String

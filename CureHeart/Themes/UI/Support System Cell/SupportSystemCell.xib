@@ -32,7 +32,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X6Y-aY-HUO">
-                                <rect key="frame" x="106" y="16" width="240" height="17"/>
+                                <rect key="frame" x="106" y="24" width="240" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="XqO-Ti-1gU"/>
                                 </constraints>
@@ -41,7 +41,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLc-aJ-vYl">
-                                <rect key="frame" x="106" y="38" width="240" height="13.5"/>
+                                <rect key="frame" x="106" y="46" width="240" height="13.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="9Gz-QV-ycB"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="72" id="Wmz-Kj-wEg"/>
@@ -57,7 +57,7 @@
                             <constraint firstItem="X6Y-aY-HUO" firstAttribute="leading" secondItem="SxN-9m-C8U" secondAttribute="trailing" constant="10" id="FOM-3i-WMi"/>
                             <constraint firstItem="aLc-aJ-vYl" firstAttribute="top" secondItem="X6Y-aY-HUO" secondAttribute="bottom" constant="5" id="QhE-kL-dgz"/>
                             <constraint firstItem="SxN-9m-C8U" firstAttribute="leading" secondItem="7XS-hT-pHp" secondAttribute="leading" constant="16" id="ahg-gY-Zod"/>
-                            <constraint firstItem="X6Y-aY-HUO" firstAttribute="top" secondItem="7XS-hT-pHp" secondAttribute="top" constant="16" id="hh2-5I-aBx"/>
+                            <constraint firstItem="X6Y-aY-HUO" firstAttribute="top" secondItem="7XS-hT-pHp" secondAttribute="top" constant="24" id="hh2-5I-aBx"/>
                             <constraint firstItem="aLc-aJ-vYl" firstAttribute="leading" secondItem="SxN-9m-C8U" secondAttribute="trailing" constant="10" id="uZL-EH-D1j"/>
                         </constraints>
                     </view>

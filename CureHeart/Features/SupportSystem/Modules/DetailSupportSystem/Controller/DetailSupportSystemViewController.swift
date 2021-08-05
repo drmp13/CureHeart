@@ -34,6 +34,8 @@ class DetailSupportSystemViewController: UIViewController, MFMailComposeViewCont
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.prefersLargeTitles = false
+        
         button_contact.layer.cornerRadius = 10
         
         FetchSupportSystemData().fetchAll(type: "\(type)"){ datas in
@@ -45,6 +47,12 @@ class DetailSupportSystemViewController: UIViewController, MFMailComposeViewCont
     }
     
     func setUI() {
+        if detailData["\(index)"]?.logo != "" {
+            getImage()
+        } else {
+            image_layanan.image = UIImage(named: "noimage")
+        }
+        
         label_nama.text = detailData["\(index)"]?.name
         label_deskripsi.text = detailData["\(index)"]?.description
         
@@ -53,13 +61,31 @@ class DetailSupportSystemViewController: UIViewController, MFMailComposeViewCont
         }
         label_list_layanan.text = array_list_layanan.joined(separator: "\n")
 
-        for i in 0..<(detailData["\(index)"]?.schedules.count)! {
-            array_list_jadwal.append("\(detailData["\(index)"]?.schedules[i].value ?? "")")
+        if (detailData["\(index)"]?.schedules.count)! > 0 {
+            for i in 0..<(detailData["\(index)"]?.schedules.count)! {
+                array_list_jadwal.append("\(detailData["\(index)"]?.schedules[i].value ?? "")")
+            }
+            label_hari_layanan.text = array_list_jadwal.joined(separator: "\n")
+        } else {
+            label_hari_layanan.text = "-"
         }
-        print(array_list_jadwal)
-        label_hari_layanan.text = array_list_jadwal.joined(separator: "\n")
         
-        label_alamat.text = detailData["\(index)"]?.address
+        if detailData["\(index)"]?.address != "" {
+            label_alamat.text = detailData["\(index)"]?.address
+        } else {
+            label_alamat.text = "-"
+        }
+    }
+    
+    func getImage() {
+        guard let url = URL(string: "https://bkpm-infomedia.com/drmp/cureheart/sp_logo/" + detailData["\(index)"]!.logo) else { return }
+        DispatchQueue.global().async {
+            if let data = try? Data(contentsOf: url) {
+                DispatchQueue.main.async {
+                    self.image_layanan.image = UIImage(data: data)
+                }
+            }
+        }
     }
     
     @IBAction func buttonContact_onClick(_ sender: Any) {
@@ -69,17 +95,23 @@ class DetailSupportSystemViewController: UIViewController, MFMailComposeViewCont
     func showActionSheet() {
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
-        if detailData["\(index)"]?.whatsapp != nil {
+        if detailData["\(index)"]?.whatsapp != "" {
+            let image = UIImage(named: "whatsapp")
             let whatsapp = UIAlertAction(title: "WA \(detailData["\(index)"]?.name ?? "")", style: .default, handler: whatsapp)
+            whatsapp.setValue(image!.withRenderingMode(.alwaysOriginal), forKey: "image")
             actionSheet.addAction(whatsapp) }
         
-        if detailData["\(index)"]?.phone != nil {
+        if detailData["\(index)"]?.phone != "" {
+            let image = UIImage(named: "call")
             let phone = UIAlertAction(title: "Call \(detailData["\(index)"]?.name ?? "")", style: .default, handler: call)
+            phone.setValue(image!.withRenderingMode(.alwaysOriginal), forKey: "image")
             actionSheet.addAction(phone)
         }
         
-        if detailData["\(index)"]?.email != nil {
+        if detailData["\(index)"]?.email != "" {
+            let image = UIImage(named: "mail")
             let email = UIAlertAction(title: "Email \(detailData["\(index)"]?.name ?? "")", style: .default, handler: email)
+            email.setValue(image!.withRenderingMode(.alwaysOriginal), forKey: "image")
             actionSheet.addAction(email)
         }
         
