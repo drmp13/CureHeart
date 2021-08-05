@@ -17,15 +17,38 @@ extension ListSupportSystemViewController: UITableViewDataSource {
         
         if SegmentedControl_SupportSystem.selectedSegmentIndex == 0 {
             // ISI DATA MENTAL HEALTH
-            cell.SupportSystemCell_ImageView.image = UIImage(named: "noimage")
+            if dataPsikolog["\(indexPath.section)"]?.logo != "" {
+                let url = URL(string: "https://bkpm-infomedia.com/drmp/cureheart/sp_logo/" + dataPsikolog["\(indexPath.section)"]!.logo)!
+                DispatchQueue.global().async {
+                    if let data = try? Data(contentsOf: url) {
+                        DispatchQueue.main.async {
+                            cell.SupportSystemCell_ImageView.image = UIImage(data: data)
+                        }
+                    }
+                }
+            } else {
+                cell.SupportSystemCell_ImageView.image = UIImage(named: "noimage")
+            }
             cell.SupportSystemCell_LabelName.text = dataPsikolog["\(indexPath.section)"]?.name
-            cell.SupportSystemCell_LabelDescription.text = dataPsikolog["\(indexPath.section)"]?.description
+            cell.SupportSystemCell_LabelDescription.text = dataPsikolog["\(indexPath.section)"]?.description_short
         } else {
             // ISI DATA ORGANIZATION
-            cell.SupportSystemCell_ImageView.image = UIImage(named: "noimage")
+            if dataOrganisasi["\(indexPath.section)"]?.logo != "" {
+                let url = URL(string: "https://bkpm-infomedia.com/drmp/cureheart/sp_logo/" + dataOrganisasi["\(indexPath.section)"]!.logo)
+                DispatchQueue.global().async {
+                    if let data = try? Data(contentsOf: url!) {
+                        DispatchQueue.main.async {
+                            cell.SupportSystemCell_ImageView.image = UIImage(data: data)
+                        }
+                    }
+                }
+            } else {
+                cell.SupportSystemCell_ImageView.image = UIImage(named: "noimage")
+            }
             cell.SupportSystemCell_LabelName.text = dataOrganisasi["\(indexPath.section)"]?.name
-            cell.SupportSystemCell_LabelDescription.text = dataOrganisasi["\(indexPath.section)"]?.description
+            cell.SupportSystemCell_LabelDescription.text = dataOrganisasi["\(indexPath.section)"]?.description_short
         }
+        
         cell.BackgroundSupportSystemCell.layer.cornerRadius = 20
         cell.BackgroundSupportSystemCell.layer.masksToBounds = false
         cell.BackgroundSupportSystemCell.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
@@ -34,6 +57,7 @@ extension ListSupportSystemViewController: UITableViewDataSource {
         cell.BackgroundSupportSystemCell.layer.shadowRadius = 2
         cell.BackgroundSupportSystemCell.layer.shouldRasterize = true
         cell.BackgroundSupportSystemCell.layer.rasterizationScale = UIScreen.main.scale
+        
         return cell
     }
     
@@ -65,5 +89,6 @@ extension ListSupportSystemViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         currentIndexpath = indexPath.section
         performSegue(withIdentifier: "SegueToDetailPage", sender: self)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

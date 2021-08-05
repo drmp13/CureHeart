@@ -13,14 +13,14 @@
             <objects>
                 <viewController id="Ktl-aW-hLN" customClass="DetailSupportSystemViewController" customModule="CureHeart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yfq-4O-AdX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D19-dF-fZf">
-                                <rect key="frame" x="0.0" y="44" width="414" height="1122"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ey6-MD-btJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1222"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="900"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pJZ-Wl-JaB">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
@@ -187,11 +187,11 @@
                         <constraints>
                             <constraint firstItem="D19-dF-fZf" firstAttribute="leading" secondItem="h80-OR-GBi" secondAttribute="leading" id="GMp-81-aYQ"/>
                             <constraint firstItem="D19-dF-fZf" firstAttribute="bottom" secondItem="h80-OR-GBi" secondAttribute="bottom" id="WbF-ge-wFC"/>
-                            <constraint firstItem="D19-dF-fZf" firstAttribute="top" secondItem="h80-OR-GBi" secondAttribute="top" id="tcZ-PG-HkW"/>
+                            <constraint firstItem="D19-dF-fZf" firstAttribute="top" secondItem="Yfq-4O-AdX" secondAttribute="top" id="tcZ-PG-HkW"/>
                             <constraint firstItem="D19-dF-fZf" firstAttribute="trailing" secondItem="h80-OR-GBi" secondAttribute="trailing" id="xcf-Oo-Hjn"/>
                         </constraints>
                     </view>
-                    <size key="freeformSize" width="414" height="1200"/>
+                    <size key="freeformSize" width="414" height="800"/>
                     <connections>
                         <outlet property="button_contact" destination="oMg-rc-vus" id="9e7-sh-613"/>
                         <outlet property="image_layanan" destination="pJZ-Wl-JaB" id="w9F-M9-3rl"/>
