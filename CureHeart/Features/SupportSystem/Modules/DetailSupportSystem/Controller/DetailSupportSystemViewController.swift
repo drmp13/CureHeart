@@ -115,6 +115,10 @@ class DetailSupportSystemViewController: UIViewController, MFMailComposeViewCont
             actionSheet.addAction(email)
         }
         
+        if detailData["\(index)"]?.whatsapp == "" && detailData["\(index)"]?.phone == "" && detailData["\(index)"]?.email == "" {
+            goToWebsite()
+        }
+        
         let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         actionSheet.addAction(cancel)
         
@@ -139,6 +143,12 @@ class DetailSupportSystemViewController: UIViewController, MFMailComposeViewCont
     
     func call(action: UIAlertAction) {
         if let url = URL(string: "tel://" + detailData["\(index)"]!.phone) {
+            UIApplication.shared.open(url)
+        }
+    }
+    
+    func goToWebsite() {
+        if let url = URL(string: detailData["\(index)"]?.website ?? "") {
             UIApplication.shared.open(url)
         }
     }
