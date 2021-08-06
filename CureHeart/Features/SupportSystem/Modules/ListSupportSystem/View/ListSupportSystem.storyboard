@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-691" y="113"/>
         </scene>
-        <!--Your Support System-->
+        <!--Support System-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="ListSupportSystemViewController" customModule="CureHeart" customModuleProvider="target" sceneMemberID="viewController">
@@ -46,8 +46,8 @@
                                     <constraint firstAttribute="width" constant="343" id="oD1-q0-sjO"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="Mental Health"/>
-                                    <segment title="Organizations"/>
+                                    <segment title="Mental Care"/>
+                                    <segment title="Other Helps"/>
                                 </segments>
                                 <connections>
                                     <action selector="didSelectOnSegmentedControl_SupportSystem:" destination="Y6W-OH-hqX" eventType="valueChanged" id="3jn-cT-CxJ"/>
@@ -65,7 +65,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Support System" image="heart.circle" catalog="system" selectedImage="heart.circle.fill" id="olB-Zl-3Xb"/>
-                    <navigationItem key="navigationItem" title="Your Support System" id="DnS-R2-V0D"/>
+                    <navigationItem key="navigationItem" title="Support System" id="DnS-R2-V0D"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="SegmentedControl_SupportSystem" destination="LNV-CL-DNv" id="FVu-Gl-Npx"/>
