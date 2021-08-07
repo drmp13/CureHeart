@@ -79,6 +79,7 @@
                         <outlet property="addToFolderButton" destination="LPR-RT-2eF" id="JQt-7H-e3R"/>
                         <outlet property="textFieldFolder" destination="OeW-en-O1G" id="UtY-CZ-qlU"/>
                         <segue destination="ifF-oR-y3U" kind="show" identifier="gotoRecordingList" id="vI5-FF-gyT"/>
+                        <segue destination="nkS-Ua-HqP" kind="show" identifier="goToRecommendation" id="eJE-gZ-LTM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -94,6 +95,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TRO-2b-Rm0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="88" y="43"/>
+        </scene>
+        <!--Recommendation-->
+        <scene sceneID="pME-Yk-RMv">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Recommendation" id="nkS-Ua-HqP" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="b7f-XY-wZA"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wQP-pJ-XPQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="103" y="196"/>
         </scene>
     </scenes>
     <resources>

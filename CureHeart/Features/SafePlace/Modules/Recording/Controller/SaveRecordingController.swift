@@ -86,7 +86,7 @@ class SaveRecordingController: UIViewController {
   @IBAction func addFolderButtonPressed(_ sender: UIButton) {
     if(selectedFolder != nil){
       _ = RecordingModel().addNewRecord(name: recording_name, path: recording_path, concerning_word: concerning_words, parentFolder: selectedFolder!)
-      performSegue(withIdentifier: "gotoRecordingList", sender: self)
+      performSegue(withIdentifier: "goToRecommendation", sender: self)
     }else{
       self.present(createDefaultAlert(alertMessage: "Please select recording folder!"), animated: true)
     }
@@ -99,6 +99,10 @@ class SaveRecordingController: UIViewController {
     if segue.identifier == "gotoRecordingList" {
       let destinationVC = segue.destination as! RecordingListController
         destinationVC.selectedFolder = selectedFolder!
+    }
+    
+    if segue.identifier == "goToRecommendation" {
+      let destinationVC = segue.destination as! RecommendationViewController
     }
   }
   /*

@@ -13,6 +13,9 @@
 		005BF05626B2A76900618C3A /* SupportSystemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005BF05426B2A76900618C3A /* SupportSystemCell.swift */; };
 		005BF05726B2A76900618C3A /* SupportSystemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 005BF05526B2A76900618C3A /* SupportSystemCell.xib */; };
 		005BF05926B2ABA800618C3A /* ListSupportSystemViewController+TableViewDataSource+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005BF05826B2ABA800618C3A /* ListSupportSystemViewController+TableViewDataSource+TableViewDelegate.swift */; };
+		0091B07826BE8EB200522D2C /* Recommendation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0091B07726BE8EB200522D2C /* Recommendation.storyboard */; };
+		0091B07A26BE8EF600522D2C /* RecommendationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0091B07926BE8EF600522D2C /* RecommendationViewController.swift */; };
+		0091B07C26BE902E00522D2C /* Recommendation+TableViewDataSource+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0091B07B26BE902E00522D2C /* Recommendation+TableViewDataSource+TableViewDelegate.swift */; };
 		00B5111826B7D1D100F44394 /* FetchSupportSystemData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B5111726B7D1D100F44394 /* FetchSupportSystemData.swift */; };
 		00FA70E326B562EF004D6DD3 /* DetailSupportSystem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00FA70E226B562EF004D6DD3 /* DetailSupportSystem.storyboard */; };
 		00FA70E526B56313004D6DD3 /* DetailSupportSystemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FA70E426B56313004D6DD3 /* DetailSupportSystemViewController.swift */; };
@@ -54,6 +57,9 @@
 		005BF05426B2A76900618C3A /* SupportSystemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportSystemCell.swift; sourceTree = "<group>"; };
 		005BF05526B2A76900618C3A /* SupportSystemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SupportSystemCell.xib; sourceTree = "<group>"; };
 		005BF05826B2ABA800618C3A /* ListSupportSystemViewController+TableViewDataSource+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListSupportSystemViewController+TableViewDataSource+TableViewDelegate.swift"; sourceTree = "<group>"; };
+		0091B07726BE8EB200522D2C /* Recommendation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recommendation.storyboard; sourceTree = "<group>"; };
+		0091B07926BE8EF600522D2C /* RecommendationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationViewController.swift; sourceTree = "<group>"; };
+		0091B07B26BE902E00522D2C /* Recommendation+TableViewDataSource+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recommendation+TableViewDataSource+TableViewDelegate.swift"; sourceTree = "<group>"; };
 		00B5111726B7D1D100F44394 /* FetchSupportSystemData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchSupportSystemData.swift; sourceTree = "<group>"; };
 		00FA70E226B562EF004D6DD3 /* DetailSupportSystem.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailSupportSystem.storyboard; sourceTree = "<group>"; };
 		00FA70E426B56313004D6DD3 /* DetailSupportSystemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSupportSystemViewController.swift; sourceTree = "<group>"; };
@@ -324,6 +330,8 @@
 				96A4BAB926B7E4C700727880 /* SaveRecordingController.swift */,
 				96F9964226B8C3F700877D5B /* RecordingListTVC.swift */,
 				96F9964626B8CB6100877D5B /* RecordingListController.swift */,
+				0091B07926BE8EF600522D2C /* RecommendationViewController.swift */,
+				0091B07B26BE902E00522D2C /* Recommendation+TableViewDataSource+TableViewDelegate.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -354,6 +362,7 @@
 				96A4BAB726B7E4B600727880 /* SaveRecording.storyboard */,
 				96F9964026B8C3C800877D5B /* RecordingList.storyboard */,
 				96F9964326B8C3F700877D5B /* RecordingListTVC.xib */,
+				0091B07726BE8EB200522D2C /* Recommendation.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -448,6 +457,7 @@
 				005BF05726B2A76900618C3A /* SupportSystemCell.xib in Resources */,
 				9684043E26B5619600FA0A58 /* SafePlace.storyboard in Resources */,
 				9684042F26B4284C00FA0A58 /* Recording.storyboard in Resources */,
+				0091B07826BE8EB200522D2C /* Recommendation.storyboard in Resources */,
 				96F9964126B8C3C800877D5B /* RecordingList.storyboard in Resources */,
 				96F9964526B8C3F700877D5B /* RecordingListTVC.xib in Resources */,
 				005BF05026B2988000618C3A /* ListSupportSystem.storyboard in Resources */,
@@ -482,11 +492,13 @@
 				9640AC5E26B6A0B900AE205F /* Response.swift in Sources */,
 				9684043626B42B9F00FA0A58 /* AGAudioRecorder.swift in Sources */,
 				9684043426B42B4200FA0A58 /* AGManager.swift in Sources */,
+				0091B07C26BE902E00522D2C /* Recommendation+TableViewDataSource+TableViewDelegate.swift in Sources */,
 				9640AC6326B6A2B400AE205F /* FolderModel.swift in Sources */,
 				9684043A26B42BCE00FA0A58 /* AGFileManager.swift in Sources */,
 				96A4BAAE26B6A9C900727880 /* UITableHelper.swift in Sources */,
 				9640AC6126B6A10900AE205F /* DateTimeHelper.swift in Sources */,
 				9640AC5926B69A8B00AE205F /* CureHeart.xcdatamodeld in Sources */,
+				0091B07A26BE8EF600522D2C /* RecommendationViewController.swift in Sources */,
 				96F9964726B8CB6100877D5B /* RecordingListController.swift in Sources */,
 				9640AC5C26B6A09600AE205F /* RecordingModel.swift in Sources */,
 				96F9963F26B82C6D00877D5B /* StringHelper.swift in Sources */,
