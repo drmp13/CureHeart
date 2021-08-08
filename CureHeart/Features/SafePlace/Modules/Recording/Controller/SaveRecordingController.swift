@@ -15,14 +15,27 @@ class SaveRecordingController: UIViewController {
   var pickerView = UIPickerView()
   var selectedFolder: Folder? = nil
   var folders = [Folder]()
+  let quotes: [String] = [
+    "You've survived hardships before and I believe that you can survive it now.",
+    "It's okay if you are feeling negative right now. It doesn't have to define you.",
+    "It's alright if you aren't positive and happy right now. Feel your emotions and let it pass naturally. My best wishes are with you.",
+    "I know how terrible it feels right now, so why don't you take a break to relax and do something that you enjoy?",
+    "You can tell me what you're going through. I'm here to listen, not to judge.",
+    "I know this is hard. I'm here with you.",
+    "I'm sorry you had to go through this horrible experience. You deserve so much better.",
+    "This is truly horrible. I understand how you feel.",
+    "Thank you for sharing this with me. I appreciate your courage and you have all my best wishes."
+  ]
 
   @IBOutlet weak var textFieldFolder: UITextField!
   @IBOutlet weak var addToFolderButton: UIButton!
+  @IBOutlet weak var quoteLabel: UILabel!
   override func viewDidLoad() {
         super.viewDidLoad()
         pickerView.delegate = self
         pickerView.dataSource = self
 
+    quoteLabel.text = quotes[Int.random(in: 0..<(quotes.count-1))]
 
         //setting picker
         let toolbar = UIToolbar()

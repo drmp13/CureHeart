@@ -121,6 +121,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="allRecordingCell" destination="Mf6-yg-XcJ" id="m5G-vb-fAE"/>
+                        <outlet property="allRecordingsCell" destination="Mf6-yg-XcJ" id="HhF-EW-qPq"/>
                         <outlet property="folderTableView" destination="76S-AD-eR2" id="rgS-Zr-tiH"/>
                         <outlet property="startButton" destination="AaU-HC-DKY" id="GrI-o7-Y1o"/>
                         <segue destination="jFN-8o-9CW" kind="show" identifier="gotoRecordingList" id="Rh1-zy-kKe"/>

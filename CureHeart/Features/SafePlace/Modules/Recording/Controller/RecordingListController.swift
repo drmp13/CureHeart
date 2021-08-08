@@ -6,12 +6,19 @@
 //
 
 import UIKit
+import AVFoundation
 
 
-class RecordingListController: UIViewController {
+class RecordingListController: UIViewController, AVAudioPlayerDelegate {
 
+  var isAllRecording: Bool = false
   var selectedFolder: Folder = Folder()
   var recordings: [Recording] = [Recording]()
+  var audioPlayer:AVAudioPlayer!
+  var audioLength = 0.0
+  var currentProgressSlider: UISlider? = nil
+  var currentButton: UIButton? = nil
+  var currentAudio: Recording? = nil
   
   @IBOutlet weak var navBar: UINavigationItem!
   @IBOutlet weak var labelTitle: UILabel!
@@ -19,7 +26,16 @@ class RecordingListController: UIViewController {
   override func viewDidLoad() {
         super.viewDidLoad()
         navBar.title = ""
-        labelTitle.text = selectedFolder.name
+
+
+
+    if(isAllRecording){
+      labelTitle.text = "All Recordings"
+    }else{
+      labelTitle.text = selectedFolder.name
+    }
+
+
 
       let nib = UINib(nibName: "RecordingListTVC", bundle: nil)
       recordingTableView.register(nib, forCellReuseIdentifier: "RecordingListTVC")
@@ -28,6 +44,8 @@ class RecordingListController: UIViewController {
       recordingTableView.separatorColor = .none
       recordingTableView.showsVerticalScrollIndicator = false
       recordingTableView.tableFooterView = UIView(frame: .zero)
+
+    refreshAllData()
         // Do any additional setup after loading the view.
     }
 
@@ -36,12 +54,78 @@ class RecordingListController: UIViewController {
   }
 
   func refreshAllData(){
-    recordings = RecordingModel().getRecordingByFolder(folder: selectedFolder).data as! [Recording]
+    recordings = RecordingModel().getRecordingByFolder(folder: selectedFolder, isAllRecording: isAllRecording).data as! [Recording]
     recordingTableView.reloadData()
   }
     
   @IBAction func navBarBackPressed(_ sender: UIBarButtonItem) {
     self.dismiss(animated: true, completion: nil)
+  }
+
+  func preparePlayer(recording_url: URL, playerProgressSlider: UISlider, playerButton: UIButton, recording: Recording) -> AVAudioPlayer {
+    currentProgressSlider = playerProgressSlider
+    currentButton = playerButton
+
+    if(currentAudio != recording){
+
+      currentAudio = recording
+    }
+      var error: NSError?
+      do {
+        audioPlayer = AVAudioPlayer()
+        audioPlayer = try AVAudioPlayer(contentsOf: recording_url as URL)
+      } catch let error1 as NSError {
+          error = error1
+          audioPlayer = nil
+      }
+
+      if let err = error {
+          print("AVAudioPlayer error: \(err.localizedDescription)")
+      } else {
+        do {
+            //keep alive audio at background
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category(rawValue: convertFromAVAudioSessionCategory(AVAudioSession.Category.playback)))
+        } catch _ {
+        }
+        do {
+            try AVAudioSession.sharedInstance().setActive(true)
+        } catch _ {
+        }
+        UIApplication.shared.beginReceivingRemoteControlEvents()
+
+        audioPlayer.volume = 10.0
+        if(audioPlayer.prepareToPlay()){
+          audioPlayer.delegate = self
+          audioLength = audioPlayer.duration
+          playerProgressSlider.maximumValue = CFloat(audioPlayer.duration)
+          playerProgressSlider.minimumValue = 0.0
+          playerProgressSlider.value = 0.0
+        }else{
+          print("cant prepare")
+        }
+    }
+
+
+    return audioPlayer
+  }
+
+
+  func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+      //recordButton.isEnabled = true
+      //pauseButton.setTitle("Play", for: .normal)
+    print("SELESAI")
+    currentProgressSlider!.value = 0.0
+    currentButton!.setImage(UIImage(systemName: "play.fill"), for: .normal)
+    //play_status = false
+  }
+
+
+  func audioButtonExe(){
+    if audioPlayer.isPlaying{
+      audioPlayer.pause()
+    }else{
+      audioPlayer.play()
+    }
   }
 
   
@@ -145,4 +229,8 @@ extension RecordingListController: UITableViewDataSource {
   }
 
 
+}
+
+fileprivate func convertFromAVAudioSessionCategory(_ input: AVAudioSession.Category) -> String {
+  return input.rawValue
 }

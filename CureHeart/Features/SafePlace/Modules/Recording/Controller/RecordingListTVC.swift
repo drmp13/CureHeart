@@ -23,6 +23,7 @@ class RecordingListTVC: UITableViewCell,AVAudioPlayerDelegate {
   var timer:Timer!
   var totalLengthOfAudio = ""
   var recording_data: Recording = Recording()
+  var already_play  = false
   var recording_url: URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0] as URL
   
   override func awakeFromNib() {
@@ -31,7 +32,7 @@ class RecordingListTVC: UITableViewCell,AVAudioPlayerDelegate {
     assingSliderUI()
     setupAudioLength()
 
-    playerProgressSlider.isEnabled = false
+    //playerProgressSlider.isEnabled = false
 
 
         // Initialization code
@@ -57,48 +58,14 @@ class RecordingListTVC: UITableViewCell,AVAudioPlayerDelegate {
 
 
 
-  func preparePlayer(recording_url: URL) {
-
-      var error: NSError?
-      do {
-        audioPlayer = AVAudioPlayer()
-        audioPlayer = try AVAudioPlayer(contentsOf: recording_url as URL)
-      } catch let error1 as NSError {
-          error = error1
-          audioPlayer = nil
-      }
-
-      if let err = error {
-          print("AVAudioPlayer error: \(err.localizedDescription)")
-      } else {
-
-
-          audioPlayer.volume = 10.0
-        do {
-            try AVAudioSession.sharedInstance().setActive(true)
-        } catch _ {
-        }
-
-        if(audioPlayer.prepareToPlay()){
-          audioPlayer.delegate = self
-          audioLength = audioPlayer.duration
-          playerProgressSlider.maximumValue = CFloat(audioPlayer.duration)
-          playerProgressSlider.minimumValue = 0.0
-          playerProgressSlider.value = 0.0
-
-        }else{
-          print("cant prepare")
-        }
-
-
-      }
-  }
+  
 
 
 
   func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
       //recordButton.isEnabled = true
       //pauseButton.setTitle("Play", for: .normal)
+    print("SELESAI TVC")
     playerProgressSlider.value = 0.0
     buttonAudio.setImage(UIImage(systemName: "play.fill"), for: .normal)
     play_status = false
@@ -111,25 +78,33 @@ class RecordingListTVC: UITableViewCell,AVAudioPlayerDelegate {
 
 
   @IBAction func audioButtonPressed(_ sender: UIButton) {
-    preparePlayer(recording_url: recording_url.absoluteURL)
+    var param = false
+    if(audioPlayer != nil){
+      param = audioPlayer.isPlaying
+    }else{
+      param = false
+    }
 
-
-      if play_status{
-        buttonAudio.setImage(UIImage(systemName: "play.fill"), for: .normal)
-        audioPlayer.pause()
-        play_status = false
-      }else{
-        buttonAudio.setImage(UIImage(systemName: "stop.fill"), for: .normal)
-        let _ = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
-          if self.audioPlayer.isPlaying{
-            print("playing")
-          }
-        }
-        startTimer()
-        audioPlayer.play()
-        play_status = true
+    if param {
+      print("pause")
+      audioPlayer.pause()
+      play_status = false
+    }else{
+      print("CEK2 \(recording_data)")
+      if(already_play == false){
+        audioPlayer = RecordingListController().preparePlayer(recording_url: recording_url.absoluteURL, playerProgressSlider: playerProgressSlider, playerButton: buttonAudio, recording: recording_data)
+        audioPlayer.delegate = self
+        already_play = true
+        print("ass")
       }
 
+      print("play")
+
+      startTimer()
+      audioPlayer.play()
+      play_status = true
+    }
+    buttonAudio.setImage(UIImage(systemName: param ? "play.fill" : "pause.fill"), for: UIControl.State())
     //audioPlayer.play()
   }
 
@@ -213,6 +188,8 @@ class RecordingListTVC: UITableViewCell,AVAudioPlayerDelegate {
   }
 
   @IBAction func uiSliderValueChange(_ sender: UISlider) {
-    //sender.isEnabled = false
+    audioPlayer.currentTime = TimeInterval(sender.value)
   }
 }
+
+

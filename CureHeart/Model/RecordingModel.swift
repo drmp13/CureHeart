@@ -10,13 +10,18 @@ import CoreData
 class RecordingModel {
   let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
-  func getRecordingByFolder(folder: Folder) -> ModelResponseDefault {
+  func getRecordingByFolder(folder: Folder, isAllRecording: Bool = false) -> ModelResponseDefault {
     var response : ModelResponseDefault
 
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let request : NSFetchRequest<Recording> = Recording.fetchRequest()
-    let predicateCompletion = NSPredicate(format: "parentFolder == %@", folder)
-    request.predicate = predicateCompletion
+
+
+    if(!isAllRecording){
+      let predicateCompletion = NSPredicate(format: "parentFolder == %@", folder)
+      request.predicate = predicateCompletion
+    }
+
     request.sortDescriptors = [NSSortDescriptor(key:"date", ascending:false)]
 
     do{

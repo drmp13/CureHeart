@@ -11,38 +11,32 @@
         <!--Save Recording Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="SaveRecordingController" customModule="CureHeart" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="overCurrentContext" id="Y6W-OH-hqX" customClass="SaveRecordingController" customModule="CureHeart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Walk on with hope in your heart and you'll never walk alone" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xkc-Zp-MK6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Walk on with hope in your heart and you'll never walk alone" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xkc-Zp-MK6">
                                 <rect key="frame" x="50" y="123" width="315" height="53"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHAH RUKH KHAN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqh-MK-Ugg">
-                                <rect key="frame" x="131" y="214" width="152" height="21"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Put your story into folder (optional)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNX-rD-xEw">
-                                <rect key="frame" x="87" y="382" width="240" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <rect key="frame" x="87" y="382" width="240" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Choose or create folder here..." borderStyle="roundedRect" placeholder="Choose or create folder here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OeW-en-O1G">
-                                <rect key="frame" x="44" y="408" width="327" height="34"/>
+                                <rect key="frame" x="44" y="406" width="327" height="34"/>
                                 <color key="backgroundColor" red="0.50588235290000005" green="0.62745098040000002" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LPR-RT-2eF">
-                                <rect key="frame" x="20" y="725" width="374" height="36"/>
+                                <rect key="frame" x="20" y="723" width="374" height="36"/>
                                 <color key="backgroundColor" red="0.89411764709999997" green="0.34509803919999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="HKE-O6-v30"/>
@@ -59,17 +53,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="mNX-rD-xEw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="87" id="0gf-my-Y1Q"/>
-                            <constraint firstItem="wqh-MK-Ugg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="131" id="8iy-LY-877"/>
+                            <constraint firstItem="mNX-rD-xEw" firstAttribute="top" secondItem="Xkc-Zp-MK6" secondAttribute="bottom" constant="206" id="9iB-eM-dgW"/>
                             <constraint firstItem="Xkc-Zp-MK6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="Hhb-Gq-vUM"/>
-                            <constraint firstItem="wqh-MK-Ugg" firstAttribute="top" secondItem="Xkc-Zp-MK6" secondAttribute="bottom" constant="38" id="QPK-yu-UBG"/>
                             <constraint firstItem="LPR-RT-2eF" firstAttribute="top" secondItem="OeW-en-O1G" secondAttribute="bottom" constant="283" id="THm-qx-qSX"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="OeW-en-O1G" secondAttribute="trailing" constant="43" id="a1O-Xu-gIX"/>
-                            <constraint firstItem="mNX-rD-xEw" firstAttribute="top" secondItem="wqh-MK-Ugg" secondAttribute="bottom" constant="147" id="bGr-Mu-6zZ"/>
                             <constraint firstItem="LPR-RT-2eF" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="epp-TW-p8Z"/>
                             <constraint firstItem="OeW-en-O1G" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="44" id="mJI-wq-NOT"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="mNX-rD-xEw" secondAttribute="trailing" constant="87" id="nHo-hL-THx"/>
                             <constraint firstItem="OeW-en-O1G" firstAttribute="top" secondItem="mNX-rD-xEw" secondAttribute="bottom" constant="8" symbolic="YES" id="ody-2A-UbK"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wqh-MK-Ugg" secondAttribute="trailing" constant="131" id="rNZ-s2-hLQ"/>
                             <constraint firstItem="Xkc-Zp-MK6" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="79" id="tYn-7L-I1W"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="LPR-RT-2eF" secondAttribute="trailing" constant="20" id="uq2-6W-L22"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Xkc-Zp-MK6" secondAttribute="trailing" constant="49" id="vF0-e8-xwC"/>
@@ -77,6 +68,7 @@
                     </view>
                     <connections>
                         <outlet property="addToFolderButton" destination="LPR-RT-2eF" id="JQt-7H-e3R"/>
+                        <outlet property="quoteLabel" destination="Xkc-Zp-MK6" id="ywz-8O-YRm"/>
                         <outlet property="textFieldFolder" destination="OeW-en-O1G" id="UtY-CZ-qlU"/>
                         <segue destination="ifF-oR-y3U" kind="show" identifier="gotoRecordingList" id="vI5-FF-gyT"/>
                         <segue destination="nkS-Ua-HqP" kind="show" identifier="goToRecommendation" id="eJE-gZ-LTM"/>
