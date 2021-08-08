@@ -69,4 +69,22 @@ class FetchSupportSystemData: UIViewController {
 
     }
 
+
+  func fetchRecommendation(type: String, completionHandler: @escaping (RawServerResponse) -> Void) {
+    let queryItems = [URLQueryItem(name: "type", value: type)]
+    var urlComps = URLComponents(string: "https://bkpm-infomedia.com/drmp/cureheart/api/support-system/fetch-recommendations")!
+    urlComps.queryItems = queryItems
+
+    guard let url = urlComps.url else { return }
+            URLSession.shared.dataTask(with: url) { (data, _, _) in
+                let users = try! JSONDecoder().decode(RawServerResponse.self, from: data!)
+
+                DispatchQueue.main.async {
+                  completionHandler(users)
+                }
+            }
+            .resume()
+
+    }
+
 }

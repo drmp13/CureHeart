@@ -16,6 +16,8 @@ class RecommendationViewController: UIViewController, MFMailComposeViewControlle
     var list_data_recommendation: [String: FetchSupportSystemData.RawServerResponse.PayloadData] = [:]
     
     var currentindex: Int = 0
+    var recommendation_type: String = ""
+    var concerning_point = 0
     
     @IBOutlet weak var button_backToSafePlace: UIButton!
     
@@ -41,20 +43,16 @@ class RecommendationViewController: UIViewController, MFMailComposeViewControlle
         tv_list_recommendation.dataSource = self
         tv_list_recommendation.delegate = self
         
-        // TAMBAH IF RECOMMENDATION = PSI
-        FetchSupportSystemData().fetchAll(type: "psi"){ datas in
+      if(recommendation_type != "" && concerning_point>=5){
+        FetchSupportSystemData().fetchRecommendation(type: recommendation_type){ datas in
             self.list_data_recommendation = datas.data
             DispatchQueue.main.async {
                 self.tv_list_recommendation.reloadData()
             }
         }
+      }
+
         
-        // TAMBAH ELSE IF RECOMMENDATION = ORG
-        FetchSupportSystemData().fetchAll(type: "org"){ datas in
-            self.list_data_recommendation = datas.data
-            DispatchQueue.main.async {
-                self.tv_list_recommendation.reloadData()
-            }
-        }
+
     }
 }

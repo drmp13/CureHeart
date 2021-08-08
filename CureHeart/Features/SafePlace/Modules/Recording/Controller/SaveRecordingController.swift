@@ -12,6 +12,8 @@ class SaveRecordingController: UIViewController {
   var recording_name = ""
   var recording_path = ""
   var concerning_words = ""
+  var recommendation_type = ""
+  var concerning_point = 0
   var pickerView = UIPickerView()
   var selectedFolder: Folder? = nil
   var folders = [Folder]()
@@ -116,6 +118,8 @@ class SaveRecordingController: UIViewController {
     
     if segue.identifier == "goToRecommendation" {
       let destinationVC = segue.destination as! RecommendationViewController
+      destinationVC.recommendation_type = recommendation_type
+      destinationVC.concerning_point = concerning_point
     }
   }
   /*

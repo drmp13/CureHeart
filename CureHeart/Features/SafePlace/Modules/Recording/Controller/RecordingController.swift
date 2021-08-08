@@ -23,6 +23,8 @@ class RecordingController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
 
   var concerning:String = ""
   var concerning_point: Int = 0
+  var concerning_psi: Bool = false
+  var concerning_org: Bool = false
 
   private var timer:Timer?
   private var elapsedTimeInSecond:Int = 0
@@ -44,57 +46,58 @@ class RecordingController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
   struct ConcerningWord {
     let word: String
     let point: Int
+    let type: String
   }
 
   let concerningWords: [ConcerningWord] = [
-    ConcerningWord(word: "Mau bunuh diri", point: 5),
-    ConcerningWord(word: "pengen bunuh diri", point: 5),
-    ConcerningWord(word: "pengen mati", point: 5),
-    ConcerningWord(word: "Depresi", point: 5),
-    ConcerningWord(word: "Udah males banget hidup", point: 5),
-    ConcerningWord(word: "Aku hancur", point: 5),
-    ConcerningWord(word: "Aku ngerasa kotor", point: 5),
-    ConcerningWord(word: "Aku diancam", point: 5),
-    ConcerningWord(word: "Trauma", point: 5),
-    ConcerningWord(word: "Mau kabur", point: 3),
-    ConcerningWord(word: "pengen kabur", point: 3),
-    ConcerningWord(word: "gak tahan lagi", point: 3),
-    ConcerningWord(word: "gak kuat", point: 3),
-    ConcerningWord(word: "Ga tau harus kaya gimana lagi", point: 3),
-    ConcerningWord(word: "Aku malu", point: 3),
-    ConcerningWord(word: "hina", point: 3),
-    ConcerningWord(word: "Pengen keluar dari kondisi ini", point: 3),
-    ConcerningWord(word: "Ga bisa gini terus", point: 3),
-    ConcerningWord(word: "capek banget", point: 1),
-    ConcerningWord(word: "Capek", point: 1),
-    ConcerningWord(word: "bingung", point: 1),
-    ConcerningWord(word: "pengen nangis", point: 1),
-    ConcerningWord(word: "Mau nangis", point: 1)
+    ConcerningWord(word: "Mau bunuh diri", point: 5, type: "psi"),
+    ConcerningWord(word: "pengen bunuh diri", point: 5, type: "psi"),
+    ConcerningWord(word: "pengen mati", point: 5, type: "psi"),
+    ConcerningWord(word: "Depresi", point: 5, type: "psi"),
+    ConcerningWord(word: "Udah males banget hidup", point: 5, type: "psi"),
+    ConcerningWord(word: "Aku hancur", point: 5, type: "psi"),
+    ConcerningWord(word: "Aku ngerasa kotor", point: 5, type: "psi"),
+    ConcerningWord(word: "Aku diancam", point: 5, type: "org"),
+    ConcerningWord(word: "Trauma", point: 5, type: "psi"),
+    ConcerningWord(word: "Mau kabur", point: 3, type: "org"),
+    ConcerningWord(word: "pengen kabur", point: 3, type: "org"),
+    ConcerningWord(word: "gak tahan lagi", point: 3, type: "org"),
+    ConcerningWord(word: "gak kuat", point: 3, type: "org"),
+    ConcerningWord(word: "Ga tau harus kaya gimana lagi", point: 3, type: "org"),
+    ConcerningWord(word: "Aku malu", point: 3, type: "psi"),
+    ConcerningWord(word: "hina", point: 3, type: "psi"),
+    ConcerningWord(word: "Pengen keluar dari kondisi ini", point: 3, type: "org"),
+    ConcerningWord(word: "Ga bisa gini terus", point: 3, type: "psi"),
+    ConcerningWord(word: "capek banget", point: 1, type: "psi"),
+    ConcerningWord(word: "Capek", point: 1, type: "psi"),
+    ConcerningWord(word: "bingung", point: 1, type: "psi"),
+    ConcerningWord(word: "pengen nangis", point: 1, type: "psi"),
+    ConcerningWord(word: "Mau nangis", point: 1, type: "psi")
   ]
 
   let concerningWords_en: [ConcerningWord] = [
-    ConcerningWord(word: "Commit suicide", point: 5),
-    ConcerningWord(word: "Suicide", point: 5),
-    ConcerningWord(word: "want to die", point: 5),
-    ConcerningWord(word: "depressed", point: 5),
-    ConcerningWord(word: "I'm tired of living", point: 5),
-    ConcerningWord(word: "I'm ruined", point: 5),
-    ConcerningWord(word: "I feel dirty", point: 5),
-    ConcerningWord(word: "I'm being threatened", point: 5),
-    ConcerningWord(word: "I'm trauma", point: 5),
-    ConcerningWord(word: "wish i could escape", point: 3),
-    ConcerningWord(word: "exhausted", point: 3),
-    ConcerningWord(word: "i can't handle it", point: 3),
-    ConcerningWord(word: "I can't do this anymore", point: 3),
-    ConcerningWord(word: "I don't know what else to do", point: 3),
-    ConcerningWord(word: "ashamed", point: 3),
-    ConcerningWord(word: "I wish I could escape from this situation", point: 3),
-    ConcerningWord(word: "I can't keep doing this", point: 3),
-    ConcerningWord(word: "I'm so tired", point: 1),
-    ConcerningWord(word: "tired", point: 1),
-    ConcerningWord(word: "confused", point: 1),
-    ConcerningWord(word: "Overwhelmed", point: 1),
-    ConcerningWord(word: "want to cry", point: 1)
+    ConcerningWord(word: "Commit suicide", point: 5, type: "psi"),
+    ConcerningWord(word: "Suicide", point: 5, type: "psi"),
+    ConcerningWord(word: "want to die", point: 5, type: "psi"),
+    ConcerningWord(word: "depressed", point: 5, type: "psi"),
+    ConcerningWord(word: "I'm tired of living", point: 5, type: "psi"),
+    ConcerningWord(word: "I'm ruined", point: 5, type: "psi"),
+    ConcerningWord(word: "I feel dirty", point: 5, type: "psi"),
+    ConcerningWord(word: "I'm being threatened", point: 5, type: "org"),
+    ConcerningWord(word: "I'm trauma", point: 5, type: "psi"),
+    ConcerningWord(word: "wish i could escape", point: 3, type: "org"),
+    ConcerningWord(word: "exhausted", point: 3, type: "org"),
+    ConcerningWord(word: "i can't handle it", point: 3, type: "org"),
+    ConcerningWord(word: "I can't do this anymore", point: 3, type: "org"),
+    ConcerningWord(word: "I don't know what else to do", point: 3, type: "org"),
+    ConcerningWord(word: "ashamed", point: 3, type: "psi"),
+    ConcerningWord(word: "I wish I could escape from this situation", point: 3, type: "org"),
+    ConcerningWord(word: "I can't keep doing this", point: 3, type: "psi"),
+    ConcerningWord(word: "I'm so tired", point: 1, type: "psi"),
+    ConcerningWord(word: "tired", point: 1, type: "psi"),
+    ConcerningWord(word: "confused", point: 1, type: "psi"),
+    ConcerningWord(word: "Overwhelmed", point: 1, type: "psi"),
+    ConcerningWord(word: "want to cry", point: 1, type: "psi")
   ]
 
 
@@ -325,6 +328,11 @@ class RecordingController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
 
     if(arrayTranscript.count > 1){
       print("\(concerningWord.word) is concerning, \(concerningWord.point) point")
+      if(concerningWord.type == "org"){
+        concerning_org = true
+      }else{
+        concerning_psi = true
+      }
       let point: Int = (arrayTranscript.count-1)*concerningWord.point
       return point
     }else{
@@ -489,6 +497,17 @@ class RecordingController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
       destinationVC.recording_name = recording_name!
       destinationVC.recording_path = recording_id!.uuidString
       destinationVC.concerning_words = concerning
+      if(concerning_psi==true && concerning_org==true){
+        destinationVC.recommendation_type = "mix"
+      }else if(concerning_psi==true){
+        destinationVC.recommendation_type = "psi"
+      }else if(concerning_org==true){
+        destinationVC.recommendation_type = "org"
+      }else{
+        destinationVC.recommendation_type = ""
+      }
+      destinationVC.concerning_point = concerning_point
+
     }
   }
 
