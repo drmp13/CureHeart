@@ -33,10 +33,11 @@ class RecommendationViewController: UIViewController, MFMailComposeViewControlle
         button_backToSafePlace.layer.cornerRadius = 10
         
         // TAMBAH IF RECOMMENDATION = PSI
-        label_recommendation.text = "Based on your story, it would be great if you meet psychologist in order to relieve you from this situation."
-        
-        // TAMBAH ELSE IF RECOMMENDATION = ORG
-        label_recommendation.text = "Based on your story, it would be great if you meet someone who could help you furthermore than us in this situation."
+        if recommendation_type == "psi" {
+            label_recommendation.text = "Based on your story, it would be great if you meet psychologist in order to relieve you from this situation."
+        } else {
+            label_recommendation.text = "Based on your story, it would be great if you meet someone who could help you furthermore than us in this situation."
+        }
         
         let nib = UINib(nibName: "\(SupportSystemCell.self)", bundle: nil)
         tv_list_recommendation.register(nib, forCellReuseIdentifier: "supportSystemCell")
