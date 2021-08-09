@@ -36,7 +36,7 @@ class RecommendationViewController: UIViewController, MFMailComposeViewControlle
         label_recommendation.text = "Based on your story, it would be great if you meet psychologist in order to relieve you from this situation."
         
         // TAMBAH ELSE IF RECOMMENDATION = ORG
-        label_recommendation.text = "Based on your story, it would be great if you meet someone in a organization who can help you through this situation."
+        label_recommendation.text = "Based on your story, it would be great if you meet someone who could help you furthermore than us in this situation."
         
         let nib = UINib(nibName: "\(SupportSystemCell.self)", bundle: nil)
         tv_list_recommendation.register(nib, forCellReuseIdentifier: "supportSystemCell")
