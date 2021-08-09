@@ -42,3 +42,24 @@ func createPromptAlert(title:String? = nil,
 
       return alert
   }
+
+func createOptionAlert(title:String? = nil,
+                       subtitle:String? = nil,
+                       actionTitle:String? = "Add",
+                       cancelTitle:String? = "Cancel",
+                       cancelHandler: ((_ text: String?) -> Void)? = nil,
+                       actionHandler: ((_ text: String?) -> Void)? = nil,
+                       option1: String? = nil,
+                       option2: String? = nil) -> UIAlertController {
+
+      let alert = UIAlertController(title: title, message: subtitle, preferredStyle: .alert)
+
+      alert.addAction(UIAlertAction(title: actionTitle, style: .default, handler: { (action:UIAlertAction) in
+        actionHandler?(option1)
+      }))
+      alert.addAction(UIAlertAction(title: cancelTitle, style: .default, handler: { (action:UIAlertAction) in
+        cancelHandler?(option2)
+      }))
+
+      return alert
+  }

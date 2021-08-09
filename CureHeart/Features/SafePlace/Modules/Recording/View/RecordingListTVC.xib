@@ -37,7 +37,10 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Story" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Zh-Ti-RRn">
-                                        <rect key="frame" x="64" y="18" width="59" height="15"/>
+                                        <rect key="frame" x="64" y="18" width="263" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="263" id="9MZ-dh-LdG"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" systemColor="systemBackgroundColor"/>
                                         <nil key="highlightedColor"/>
@@ -56,6 +59,7 @@
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="b3a-iU-tXl">
                                         <rect key="frame" x="64" y="38" width="287" height="34"/>
+                                        <color key="tintColor" systemColor="systemBackgroundColor"/>
                                         <connections>
                                             <action selector="uiSliderValueChange:" destination="KGk-i7-Jjw" eventType="valueChanged" id="rVp-Pv-aCb"/>
                                         </connections>
@@ -70,7 +74,7 @@
                                     <constraint firstItem="b3a-iU-tXl" firstAttribute="leading" secondItem="IZY-Lw-6Ee" secondAttribute="trailing" constant="10.5" id="cOy-sj-adi"/>
                                     <constraint firstAttribute="trailing" secondItem="b3a-iU-tXl" secondAttribute="trailing" constant="11" id="gpy-0p-lvx"/>
                                     <constraint firstAttribute="bottom" secondItem="IZY-Lw-6Ee" secondAttribute="bottom" constant="31" id="kOW-en-Rcl"/>
-                                    <constraint firstAttribute="trailing" secondItem="3Zh-Ti-RRn" secondAttribute="trailing" constant="237" id="mB3-81-Chu"/>
+                                    <constraint firstAttribute="trailing" secondItem="3Zh-Ti-RRn" secondAttribute="trailing" constant="33" id="mB3-81-Chu"/>
                                     <constraint firstItem="IZY-Lw-6Ee" firstAttribute="leading" secondItem="sw4-Mp-eEb" secondAttribute="leading" constant="17" id="mCP-SS-15C"/>
                                     <constraint firstAttribute="bottom" secondItem="ISX-ja-jaU" secondAttribute="bottom" constant="26" id="mvv-55-1ch"/>
                                     <constraint firstItem="b3a-iU-tXl" firstAttribute="top" secondItem="sw4-Mp-eEb" secondAttribute="top" constant="38" id="tgD-iV-eVf"/>

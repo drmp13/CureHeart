@@ -12,8 +12,10 @@ class SafePlaceController: UIViewController {
   @IBOutlet weak var startButton: UIButton!
   @IBOutlet weak var allRecordingCell: UIView!
   @IBOutlet weak var folderTableView: UITableView!
-
+  @IBOutlet weak var allRecordingsCell: UIView!
+  
   var folders = [Folder]()
+  var allRecordingClicked: Bool = false
   override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,11 +31,17 @@ class SafePlaceController: UIViewController {
     let nib = UINib(nibName: "FolderCell", bundle: nil)
     folderTableView.register(nib, forCellReuseIdentifier: "FolderCell")
 
+    let cg1Tap = UITapGestureRecognizer(target: self, action: #selector(setCategoryIndexCG1(tapGestureRecognizer:)))
+    allRecordingsCell.addGestureRecognizer(cg1Tap)
+    allRecordingsCell.isUserInteractionEnabled = true
+
+    refreshAllData()
 
     }
 
   override func viewDidAppear(_ animated: Bool) {
     refreshAllData()
+    allRecordingClicked = false
   }
 
   func refreshAllData(){
@@ -67,17 +75,35 @@ class SafePlaceController: UIViewController {
 
   }
 
+
+
+
+
+  @objc func setCategoryIndexCG1(tapGestureRecognizer: UITapGestureRecognizer){
+    allRecordingClicked = true
+    performSegue(withIdentifier: "gotoRecordingList", sender: self)
+  }
+
   // Segue
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
     if segue.identifier == "gotoRecordingList" {
       let destinationVC = segue.destination as! RecordingListController
-      if let indexPath = folderTableView.indexPathForSelectedRow {
-        destinationVC.selectedFolder = folders[indexPath.row]
+
+      if(allRecordingClicked){
+        destinationVC.selectedFolder = Folder()
+        destinationVC.isAllRecording = true
+      }else{
+        if let indexPath = folderTableView.indexPathForSelectedRow {
+          destinationVC.selectedFolder = folders[indexPath.row]
+          destinationVC.isAllRecording = false
+        }
       }
+
 
     }
   }
+
 
 }
 
@@ -112,12 +138,11 @@ extension SafePlaceController: UITableViewDataSource {
   }
 
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    print("helloss")
     if(tableView == folderTableView){
-      print("TVC Clicked")
       performSegue(withIdentifier: "gotoRecordingList", sender: self)
     }
   }
+
 
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 

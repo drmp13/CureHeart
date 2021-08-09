@@ -21,8 +21,10 @@ class RecordingController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
   var audioRecorder: AVAudioRecorder!
   var audioPlayer:AVAudioPlayer!
 
-  let concerning_id = ["bangsat", "anjing", "babi"]
   var concerning:String = ""
+  var concerning_point: Int = 0
+  var concerning_psi: Bool = false
+  var concerning_org: Bool = false
 
   private var timer:Timer?
   private var elapsedTimeInSecond:Int = 0
@@ -30,23 +32,106 @@ class RecordingController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
     //Speech Recognizer
   let audioEngine = AVAudioEngine()
   //    let speechRecognizer: SFSpeechRecognizer? = SFSpeechRecognizer()
-  let speechRecognizer: SFSpeechRecognizer? = SFSpeechRecognizer(locale: Locale.init(identifier: "id-ID"))
+  var speechRecognizer: SFSpeechRecognizer? = SFSpeechRecognizer(locale: Locale.init(identifier: "en-US"))
   let request = SFSpeechAudioBufferRecognitionRequest()
   var recognitionTask: SFSpeechRecognitionTask?
   var isRecording = false
   var recording_id: UUID? = nil
+  var lastWord: String = ""
+  var transcript: String = ""
+  var lastWord_en: String = ""
+  var transcript_en: String = ""
+
+
+  struct ConcerningWord {
+    let word: String
+    let point: Int
+    let type: String
+  }
+
+  let concerningWords: [ConcerningWord] = [
+    ConcerningWord(word: "Mau bunuh diri", point: 5, type: "psi"),
+    ConcerningWord(word: "pengen bunuh diri", point: 5, type: "psi"),
+    ConcerningWord(word: "pengen mati", point: 5, type: "psi"),
+    ConcerningWord(word: "Depresi", point: 5, type: "psi"),
+    ConcerningWord(word: "Udah males banget hidup", point: 5, type: "psi"),
+    ConcerningWord(word: "Aku hancur", point: 5, type: "psi"),
+    ConcerningWord(word: "Aku ngerasa kotor", point: 5, type: "psi"),
+    ConcerningWord(word: "Aku diancam", point: 5, type: "org"),
+    ConcerningWord(word: "Trauma", point: 5, type: "psi"),
+    ConcerningWord(word: "Mau kabur", point: 3, type: "org"),
+    ConcerningWord(word: "pengen kabur", point: 3, type: "org"),
+    ConcerningWord(word: "gak tahan lagi", point: 3, type: "org"),
+    ConcerningWord(word: "gak kuat", point: 3, type: "org"),
+    ConcerningWord(word: "Ga tau harus kaya gimana lagi", point: 3, type: "org"),
+    ConcerningWord(word: "Aku malu", point: 3, type: "psi"),
+    ConcerningWord(word: "hina", point: 3, type: "psi"),
+    ConcerningWord(word: "Pengen keluar dari kondisi ini", point: 3, type: "org"),
+    ConcerningWord(word: "Ga bisa gini terus", point: 3, type: "psi"),
+    ConcerningWord(word: "capek banget", point: 1, type: "psi"),
+    ConcerningWord(word: "Capek", point: 1, type: "psi"),
+    ConcerningWord(word: "bingung", point: 1, type: "psi"),
+    ConcerningWord(word: "pengen nangis", point: 1, type: "psi"),
+    ConcerningWord(word: "Mau nangis", point: 1, type: "psi")
+  ]
+
+  let concerningWords_en: [ConcerningWord] = [
+    ConcerningWord(word: "Commit suicide", point: 5, type: "psi"),
+    ConcerningWord(word: "Suicide", point: 5, type: "psi"),
+    ConcerningWord(word: "want to die", point: 5, type: "psi"),
+    ConcerningWord(word: "depressed", point: 5, type: "psi"),
+    ConcerningWord(word: "I'm tired of living", point: 5, type: "psi"),
+    ConcerningWord(word: "I'm ruined", point: 5, type: "psi"),
+    ConcerningWord(word: "I feel dirty", point: 5, type: "psi"),
+    ConcerningWord(word: "I'm being threatened", point: 5, type: "org"),
+    ConcerningWord(word: "I'm trauma", point: 5, type: "psi"),
+    ConcerningWord(word: "wish i could escape", point: 3, type: "org"),
+    ConcerningWord(word: "exhausted", point: 3, type: "org"),
+    ConcerningWord(word: "i can't handle it", point: 3, type: "org"),
+    ConcerningWord(word: "I can't do this anymore", point: 3, type: "org"),
+    ConcerningWord(word: "I don't know what else to do", point: 3, type: "org"),
+    ConcerningWord(word: "ashamed", point: 3, type: "psi"),
+    ConcerningWord(word: "I wish I could escape from this situation", point: 3, type: "org"),
+    ConcerningWord(word: "I can't keep doing this", point: 3, type: "psi"),
+    ConcerningWord(word: "I'm so tired", point: 1, type: "psi"),
+    ConcerningWord(word: "tired", point: 1, type: "psi"),
+    ConcerningWord(word: "confused", point: 1, type: "psi"),
+    ConcerningWord(word: "Overwhelmed", point: 1, type: "psi"),
+    ConcerningWord(word: "want to cry", point: 1, type: "psi")
+  ]
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         recording_id = UUID()
+
+      self.setupView()
         //setup Recorder
+      //Hide Unecessary Button
+      recordButton.isHidden = true
+      pauseButton.isHidden = true
+      stopRecordingButton.isHidden = true
+      saveRecordingButton.isHidden = true
+      timeLabel.isHidden = true
+      self.requestSpeechAuthorization()
 
-
-
-        self.requestSpeechAuthorization()
-        self.setupView()
 
     }
+
+  override func viewDidAppear(_ animated: Bool) {
+    let alert = createOptionAlert(title: nil, subtitle: "In what language do you prefer to tell your story?", actionTitle: "English", cancelTitle: "Indonesia",
+        cancelHandler:
+                    { [] (input:String?) in
+                      self.speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: input ?? "en-US"))
+
+        },
+        actionHandler:
+                    { [] (input:String?) in
+                      self.speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: input ?? "id-ID"))
+        }, option1: "en-US", option2: "id-ID")
+
+    self.present(alert, animated: true)
+  }
 
     func setupView() {
         recordingSession = AVAudioSession.sharedInstance()
@@ -130,11 +215,13 @@ class RecordingController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
         ]
 
         do {
+          
           //Record
           audioRecorder = try AVAudioRecorder(url: audioFilename, settings: settings)
           audioRecorder.delegate = self
           audioRecorder.record()
           self.recordAndRecognizeSpeech()
+          //self.recordAndRecognizeSpeechEN()
 
           //Show Button
           startTimer()
@@ -174,18 +261,20 @@ class RecordingController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
 
   }
 
-  @IBAction func playAudioButtonTapped(_ sender: UIButton) {
-    if (sender.titleLabel?.text == "Play"){
-        recordButton.isEnabled = false
-        sender.setTitle("Stop", for: .normal)
-        
-    } else {
-        audioPlayer.stop()
-        sender.setTitle("Play", for: .normal)
+
+  @IBAction func pauseRecordingTapped(_ sender: UIButton) {
+    if(pauseButton.titleLabel?.text=="Pause"){
+      audioRecorder.pause()
+      pauseButton.setTitle("Resume", for: .normal)
+      pauseTimer()
+    }else{
+      audioRecorder.record()
+      pauseButton.setTitle("Pause", for: .normal)
+      startTimer()
     }
+
   }
 
-    
 
     
 
@@ -233,11 +322,92 @@ class RecordingController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
           audioEngine.inputNode.removeTap(onBus: 0)
       }
 
+  func countPointByConcerningWord(concerningWord: ConcerningWord, concerningWords: [ConcerningWord]) -> Int{
+    let observedTranscript:String = "--- "+transcript+" ---"
+    let arrayTranscript = observedTranscript.components(separatedBy: concerningWord.word)
+
+    if(arrayTranscript.count > 1){
+      print("\(concerningWord.word) is concerning, \(concerningWord.point) point")
+      if(concerningWord.type == "org"){
+        concerning_org = true
+      }else{
+        concerning_psi = true
+      }
+      let point: Int = (arrayTranscript.count-1)*concerningWord.point
+      return point
+    }else{
+      return 0
+    }
+
+
+  }
+
+  func countPoint(){
+    for word in concerningWords {
+        let point = countPointByConcerningWord(concerningWord: word, concerningWords: concerningWords)
+        concerning_point += point
+    }
+
+    for word in concerningWords_en {
+        let point = countPointByConcerningWord(concerningWord: word, concerningWords: concerningWords_en)
+        concerning_point += point
+    }
+  }
+
   @IBAction func saveRecordingButton(_ sender: UIButton) {
-    performSegue(withIdentifier: "saveRecordingSegue", sender: self)
+//    recognizeSpeechFromRecord() { (response, error) in
+//      print("woy")
+//      self.transcript_en = response
+//      self.countPoint()
+//      print("Transcript ID: \(self.transcript)")
+//      print("Transcript EN: \(self.transcript_en)")
+//      print("Point: \(self.concerning_point)")
+//      self.performSegue(withIdentifier: "saveRecordingSegue", sender: self)
+//
+//    }
+    self.countPoint()
+    print("Transcript ID: \(self.transcript)")
+    print("Point: \(self.concerning_point)")
+    self.performSegue(withIdentifier: "saveRecordingSegue", sender: self)
   }
 
   //MARK: - Recognize Speech
+
+  func recognizeSpeechFromRecord(delegate: @escaping (_ responses_text: String, _ error: Error?) -> Void){
+    let audioURL = getFileURL(recording_id: recording_id!.uuidString)
+
+    let recognizer = SFSpeechRecognizer(locale: Locale(identifier: "en-US"))
+    let request = SFSpeechURLRecognitionRequest(url: audioURL)
+
+
+
+      request.shouldReportPartialResults = false
+
+      if (recognizer?.isAvailable)! {
+          recognizer?.recognitionTask(with: request) { result, error in
+              guard error == nil else { print("Error: \(error!)"); return }
+              guard let result = result else { print("No result!"); return }
+
+            print("woy delegate")
+
+                        delegate(
+                            result.bestTranscription.formattedString,
+                            nil
+                        )
+            //}
+          }
+
+      } else {
+        //DispatchQueue.global().asyncAfter(deadline: .now() + 2) {
+                    delegate(
+                        "",
+                        nil
+                    )
+        //}
+      }
+
+
+  }
       func recordAndRecognizeSpeech() {
           let node = audioEngine.inputNode
           let recordingFormat = node.outputFormat(forBus: 0)
@@ -260,7 +430,9 @@ class RecordingController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
               // Recognizer is not available right now
               return
           }
-          recognitionTask = speechRecognizer?.recognitionTask(with: request, resultHandler: { result, error in
+
+
+        recognitionTask = speechRecognizer?.recognitionTask(with: request, resultHandler: { [self] result, error in
               if let result = result {
 
                   let bestString = result.bestTranscription.formattedString
@@ -269,17 +441,25 @@ class RecordingController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
                       let indexTo = bestString.index(bestString.startIndex, offsetBy: segment.substringRange.location)
                       lastString = String(bestString[indexTo...])
                   }
-                  print(lastString)
-                if(self.concerning_id.contains(lastString)){
-                  self.concerning = self.concerning+" "+lastString
+
+                if(lastString != lastWord){
+                  transcript += " "+lastWord
+                  lastWord = lastString
                 }
+
                   //self.checkForColorsSaid(resultString: lastString)
               } else if let error = error {
                   //self.sendAlert(title: "Speech Recognizer Error", message: "There has been a speech recognition error.")
                   print(error)
               }
           })
+
+
+
+
       }
+
+
 
   //MARK: - Check Authorization Status
   func requestSpeechAuthorization() {
@@ -317,6 +497,17 @@ class RecordingController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
       destinationVC.recording_name = recording_name!
       destinationVC.recording_path = recording_id!.uuidString
       destinationVC.concerning_words = concerning
+      if(concerning_psi==true && concerning_org==true){
+        destinationVC.recommendation_type = "mix"
+      }else if(concerning_psi==true){
+        destinationVC.recommendation_type = "psi"
+      }else if(concerning_org==true){
+        destinationVC.recommendation_type = "org"
+      }else{
+        destinationVC.recommendation_type = ""
+      }
+      destinationVC.concerning_point = concerning_point
+
     }
   }
 

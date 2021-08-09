@@ -29,29 +29,32 @@
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="m7h-9V-IXE">
-                                <rect key="frame" x="0.0" y="202" width="414" height="464"/>
+                                <rect key="frame" x="0.0" y="202" width="414" height="480"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="464" id="YDk-sq-cWU"/>
+                                    <constraint firstAttribute="height" constant="480" id="YDk-sq-cWU"/>
                                 </constraints>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lAr-XS-Ysb">
-                                <rect key="frame" x="0.0" y="674" width="414" height="188"/>
+                                <rect key="frame" x="0.0" y="690" width="414" height="172"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0r-n2-3ic">
-                                        <rect key="frame" x="172" y="59" width="70" height="70"/>
+                                        <rect key="frame" x="172" y="51" width="70" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="PNF-2N-mdT"/>
                                             <constraint firstAttribute="height" constant="70" id="egi-gI-kDc"/>
                                         </constraints>
                                         <state key="normal" image="button-audio"/>
+                                        <connections>
+                                            <segue destination="yxc-e1-7Lp" kind="presentation" id="rV9-qc-l1d"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.85490196078431369" green="0.8901960784313725" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="q0r-n2-3ic" firstAttribute="leading" secondItem="lAr-XS-Ysb" secondAttribute="leading" constant="172" id="2D9-q4-LTy"/>
-                                    <constraint firstAttribute="height" constant="188" id="5LD-z3-620"/>
-                                    <constraint firstItem="q0r-n2-3ic" firstAttribute="top" secondItem="lAr-XS-Ysb" secondAttribute="top" constant="59" id="qFb-HT-YKI"/>
+                                    <constraint firstAttribute="height" constant="172" id="5LD-z3-620"/>
+                                    <constraint firstItem="q0r-n2-3ic" firstAttribute="centerY" secondItem="lAr-XS-Ysb" secondAttribute="centerY" id="8n3-Bi-dMv"/>
+                                    <constraint firstItem="q0r-n2-3ic" firstAttribute="centerX" secondItem="lAr-XS-Ysb" secondAttribute="centerX" id="OJk-yj-wOf"/>
                                     <constraint firstAttribute="width" constant="414" id="s0p-Y7-jhQ"/>
                                 </constraints>
                             </view>
@@ -87,6 +90,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="85.714285714285708"/>
+        </scene>
+        <!--Recording-->
+        <scene sceneID="YQN-x2-4cG">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Recording" id="yxc-e1-7Lp" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qJk-DZ-sU2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="722" y="132"/>
         </scene>
     </scenes>
     <resources>
