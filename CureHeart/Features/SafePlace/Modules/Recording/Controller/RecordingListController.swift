@@ -173,7 +173,6 @@ extension RecordingListController: UITableViewDataSource {
         listData = recordings.count
       }
     }
-
     return listData
   }
 
@@ -185,9 +184,7 @@ extension RecordingListController: UITableViewDataSource {
   }
 
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-
       return 100
-
   }
 
   func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {

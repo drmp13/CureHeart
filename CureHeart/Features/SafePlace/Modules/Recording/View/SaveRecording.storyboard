@@ -11,7 +11,7 @@
         <!--Save Recording Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController modalPresentationStyle="overCurrentContext" id="Y6W-OH-hqX" customClass="SaveRecordingController" customModule="CureHeart" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="currentContext" id="Y6W-OH-hqX" customClass="SaveRecordingController" customModule="CureHeart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,6 +72,7 @@
                         <outlet property="textFieldFolder" destination="OeW-en-O1G" id="UtY-CZ-qlU"/>
                         <segue destination="ifF-oR-y3U" kind="show" identifier="gotoRecordingList" id="vI5-FF-gyT"/>
                         <segue destination="nkS-Ua-HqP" kind="show" identifier="goToRecommendation" id="eJE-gZ-LTM"/>
+                        <segue destination="ze5-IS-hRg" kind="showDetail" identifier="goToNoRecommendation" id="H8q-OH-MgX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -97,6 +98,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wQP-pJ-XPQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="103" y="196"/>
+        </scene>
+        <!--NoRecommendation-->
+        <scene sceneID="FDi-Zr-UMI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NoRecommendation" id="ze5-IS-hRg" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nws-M9-u9b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="92" y="262"/>
         </scene>
     </scenes>
     <resources>

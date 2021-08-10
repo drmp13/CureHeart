@@ -44,6 +44,9 @@ class SafePlaceController: UIViewController {
     allRecordingClicked = false
   }
 
+  
+  
+
   func refreshAllData(){
     folders = FolderModel().getFolders().data as! [Folder]
     folderTableView.reloadData()

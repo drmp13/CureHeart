@@ -56,4 +56,13 @@ class RecommendationViewController: UIViewController, MFMailComposeViewControlle
         
 
     }
+  @IBAction func dismissAll(_ sender: UIButton) {
+    if let first = presentingViewController,
+            let second = first.presentingViewController, let third = second.presentingViewController{
+              first.view.isHidden = true
+              first.dismiss(animated: false)
+              second.dismiss(animated: false)
+              third.dismiss(animated: true)
+         }
+  }
 }

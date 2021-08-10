@@ -38,6 +38,8 @@
 		9684043A26B42BCE00FA0A58 /* AGFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9684043926B42BCE00FA0A58 /* AGFileManager.swift */; };
 		9684043E26B5619600FA0A58 /* SafePlace.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9684043D26B5619600FA0A58 /* SafePlace.storyboard */; };
 		9699B98326B9347F00F83A4A /* PathHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9699B98226B9347F00F83A4A /* PathHelper.swift */; };
+		96A0970226C12F4C00F7B42F /* NoRecommendation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96A0970126C12F4C00F7B42F /* NoRecommendation.storyboard */; };
+		96A0970426C12F7C00F7B42F /* NoRecommendationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A0970326C12F7C00F7B42F /* NoRecommendationViewController.swift */; };
 		96A4BAAE26B6A9C900727880 /* UITableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A4BAAD26B6A9C900727880 /* UITableHelper.swift */; };
 		96A4BAB026B6AA0B00727880 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A4BAAF26B6AA0B00727880 /* AlertHelper.swift */; };
 		96A4BAB626B6ABCF00727880 /* SafePlaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A4BAB526B6ABCF00727880 /* SafePlaceController.swift */; };
@@ -84,6 +86,8 @@
 		9684043926B42BCE00FA0A58 /* AGFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGFileManager.swift; sourceTree = "<group>"; };
 		9684043D26B5619600FA0A58 /* SafePlace.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SafePlace.storyboard; sourceTree = "<group>"; };
 		9699B98226B9347F00F83A4A /* PathHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathHelper.swift; sourceTree = "<group>"; };
+		96A0970126C12F4C00F7B42F /* NoRecommendation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NoRecommendation.storyboard; sourceTree = "<group>"; };
+		96A0970326C12F7C00F7B42F /* NoRecommendationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoRecommendationViewController.swift; sourceTree = "<group>"; };
 		96A4BAAD26B6A9C900727880 /* UITableHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableHelper.swift; sourceTree = "<group>"; };
 		96A4BAAF26B6AA0B00727880 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		96A4BAB526B6ABCF00727880 /* SafePlaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafePlaceController.swift; sourceTree = "<group>"; };
@@ -332,6 +336,7 @@
 				96F9964626B8CB6100877D5B /* RecordingListController.swift */,
 				0091B07926BE8EF600522D2C /* RecommendationViewController.swift */,
 				0091B07B26BE902E00522D2C /* Recommendation+TableViewDataSource+TableViewDelegate.swift */,
+				96A0970326C12F7C00F7B42F /* NoRecommendationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -363,6 +368,7 @@
 				96F9964026B8C3C800877D5B /* RecordingList.storyboard */,
 				96F9964326B8C3F700877D5B /* RecordingListTVC.xib */,
 				0091B07726BE8EB200522D2C /* Recommendation.storyboard */,
+				96A0970126C12F4C00F7B42F /* NoRecommendation.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -461,6 +467,7 @@
 				96F9964126B8C3C800877D5B /* RecordingList.storyboard in Resources */,
 				96F9964526B8C3F700877D5B /* RecordingListTVC.xib in Resources */,
 				005BF05026B2988000618C3A /* ListSupportSystem.storyboard in Resources */,
+				96A0970226C12F4C00F7B42F /* NoRecommendation.storyboard in Resources */,
 				96A4BAB826B7E4B600727880 /* SaveRecording.storyboard in Resources */,
 				9640AC6726B6A5BE00AE205F /* FolderCell.xib in Resources */,
 				96121EC426B29199005B57E7 /* LaunchScreen.storyboard in Resources */,
@@ -496,6 +503,7 @@
 				9640AC6326B6A2B400AE205F /* FolderModel.swift in Sources */,
 				9684043A26B42BCE00FA0A58 /* AGFileManager.swift in Sources */,
 				96A4BAAE26B6A9C900727880 /* UITableHelper.swift in Sources */,
+				96A0970426C12F7C00F7B42F /* NoRecommendationViewController.swift in Sources */,
 				9640AC6126B6A10900AE205F /* DateTimeHelper.swift in Sources */,
 				9640AC5926B69A8B00AE205F /* CureHeart.xcdatamodeld in Sources */,
 				0091B07A26BE8EF600522D2C /* RecommendationViewController.swift in Sources */,
@@ -643,13 +651,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P74487TWS7;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = AQ243C2X36;
 				INFOPLIST_FILE = CureHeart/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kendraarsena.test.CureHeart;
+				PRODUCT_BUNDLE_IDENTIFIER = com.drmp.test.CureHeart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -662,13 +671,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = AQ243C2X36;
 				INFOPLIST_FILE = CureHeart/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kendraarsena.test.CureHeart;
+				PRODUCT_BUNDLE_IDENTIFIER = com.drmp.test.CureHeart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

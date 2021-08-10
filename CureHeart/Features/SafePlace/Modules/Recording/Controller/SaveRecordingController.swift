@@ -101,7 +101,14 @@ class SaveRecordingController: UIViewController {
   @IBAction func addFolderButtonPressed(_ sender: UIButton) {
     if(selectedFolder != nil){
       _ = RecordingModel().addNewRecord(name: recording_name, path: recording_path, concerning_word: concerning_words, parentFolder: selectedFolder!)
-      performSegue(withIdentifier: "goToRecommendation", sender: self)
+      if(concerning_point>=5){
+        //self.dismiss(animated: false, completion: nil)
+        performSegue(withIdentifier: "goToRecommendation", sender: self)
+      }else{
+        //self.dismiss(animated: false, completion: nil)
+        performSegue(withIdentifier: "goToNoRecommendation", sender: self)
+      }
+
     }else{
       self.present(createDefaultAlert(alertMessage: "Please select recording folder!"), animated: true)
     }

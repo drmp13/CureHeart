@@ -368,6 +368,18 @@ class RecordingController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
     self.countPoint()
     print("Transcript ID: \(self.transcript)")
     print("Point: \(self.concerning_point)")
+    print(self)
+    
+//    weak var pvc = self.presentingViewController  as? UITabBarController
+//    self.dismiss(animated: true, completion: {
+//      pvc?.performSegue(withIdentifier: "saveRecordingSegue", sender: self)
+//      pvc?.selectedIndex = 0
+//
+//    })
+//    self.dismiss(animated: false, completion: {
+//      self.performSegue(withIdentifier: "saveRecordingSegue", sender: self)
+//    })
+
     self.performSegue(withIdentifier: "saveRecordingSegue", sender: self)
   }
 
