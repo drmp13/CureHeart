@@ -25,6 +25,7 @@ class RecordingController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
   var concerning_point: Int = 0
   var concerning_psi: Bool = false
   var concerning_org: Bool = false
+  var is_start: Bool = false
 
   private var timer:Timer?
   private var elapsedTimeInSecond:Int = 0
@@ -115,6 +116,8 @@ class RecordingController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
       timeLabel.isHidden = true
       self.requestSpeechAuthorization()
 
+      is_start = true
+
 
     }
 
@@ -130,7 +133,11 @@ class RecordingController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
                       self.speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: input ?? "id-ID"))
         }, option1: "en-US", option2: "id-ID")
 
-    self.present(alert, animated: true)
+    if(is_start){
+      self.present(alert, animated: true)
+      is_start = false
+    }
+
   }
 
     func setupView() {

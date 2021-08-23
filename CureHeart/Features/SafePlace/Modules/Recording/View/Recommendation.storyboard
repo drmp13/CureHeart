@@ -43,7 +43,7 @@
                                 </state>
                                 <connections>
                                     <action selector="dismissAll:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="3is-gp-msx"/>
-                                    <segue destination="PEY-4l-deT" kind="presentation" modalPresentationStyle="fullScreen" id="1rL-Po-mE0"/>
+                                    <segue destination="6dy-da-WYc" kind="unwind" identifier="backToMain" unwindAction="unwind:" id="7cI-sn-vWy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -68,18 +68,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="6dy-da-WYc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="132" y="66"/>
-        </scene>
-        <!--Main-->
-        <scene sceneID="D3j-x9-Z0c">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="PEY-4l-deT" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="0Lr-49-bJm"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rQZ-5h-ePL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="702" y="66"/>
         </scene>
     </scenes>
     <resources>

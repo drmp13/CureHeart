@@ -11,7 +11,7 @@ class FolderModel {
   let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
 
-  func getFolderByName(name: String) -> ModelResponseDefault {
+  func getFolderByName(name: String, getCount:Bool = true) -> ModelResponseDefault {
     var response : ModelResponseDefault
 
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -21,8 +21,14 @@ class FolderModel {
     request.fetchLimit = 1
 
     do{
-      let count = try context.count(for: request)
-      response = ModelResponseDefault(query_status: true, message: "OK", data: count)
+      if(getCount){
+        let count = try context.count(for: request)
+        response = ModelResponseDefault(query_status: true, message: "OK", data: count)
+      }else{
+        let data = try context.fetch(request).first
+        response = ModelResponseDefault(query_status: true, message: "OK", data: data)
+      }
+
     } catch {
       response = ModelResponseDefault(query_status: false, message: "Error: \(error)", data: 0)
     }

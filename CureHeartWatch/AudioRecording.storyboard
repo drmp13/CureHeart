@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="18122" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="watch44"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="18022"/>
+    </dependencies>
+    <scenes>
+        <!--CureHeart-->
+        <scene sceneID="Eup-IJ-bGE">
+            <objects>
+                <controller identifier="AudioRecording" title="CureHeart" fullScreen="YES" id="lse-1P-Ha8" customClass="AudioRecordingController" customModule="CureHeartWatch_Extension">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" text="New Story" textAlignment="center" id="1bo-H5-lD9"/>
+                        <separator alignment="left" alpha="0.0" id="I2G-8w-wqP"/>
+                        <button width="100" height="100" alignment="center" verticalAlignment="center" backgroundImage="button-audio" id="3uV-08-xO9">
+                            <connections>
+                                <action selector="audioButtonTapped" destination="lse-1P-Ha8" id="ZIv-Vc-z6y"/>
+                            </connections>
+                        </button>
+                        <separator alignment="left" alpha="0.0" id="Nm4-1C-cFx"/>
+                        <label alignment="center" verticalAlignment="center" text="00:00" textAlignment="center" id="ZYw-DP-O23"/>
+                    </items>
+                    <connections>
+                        <outlet property="audioButton" destination="3uV-08-xO9" id="zXx-NX-ULd"/>
+                        <outlet property="timeLabel" destination="ZYw-DP-O23" id="dTb-1E-j2X"/>
+                        <segue destination="TSH-1L-YC8" kind="relationship" relationship="nextPage" id="pYd-fr-cDy"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="757.60869565217388" y="344.55357142857144"/>
+        </scene>
+        <!--DoneRecording-->
+        <scene sceneID="Oub-IN-Bxm">
+            <objects>
+                <controllerPlaceholder referencedIdentifier="DoneRecording" id="TSH-1L-YC8"/>
+            </objects>
+            <point key="canvasLocation" x="946" y="351"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="button-audio" width="170" height="170"/>
+    </resources>
+</document>

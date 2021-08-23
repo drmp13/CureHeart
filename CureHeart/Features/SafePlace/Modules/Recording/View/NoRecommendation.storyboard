@@ -67,7 +67,7 @@
                                 </state>
                                 <connections>
                                     <action selector="dismissAll:" destination="ROB-Kk-kEA" eventType="touchUpInside" id="aPp-QZ-kXp"/>
-                                    <segue destination="bBv-9g-kmS" kind="presentation" modalPresentationStyle="fullScreen" id="uGa-sB-xRe"/>
+                                    <segue destination="Tca-e3-06E" kind="unwind" identifier="backToMain" unwindAction="unwind:" id="tOS-eP-VNY"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We wish you all the best" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTf-f9-O4c">
@@ -100,6 +100,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="djf-fE-tKo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Tca-e3-06E" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1176.8115942028987" y="72.991071428571431"/>
         </scene>

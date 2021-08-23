@@ -44,6 +44,11 @@ class SafePlaceController: UIViewController {
     allRecordingClicked = false
   }
 
+  @IBAction func unwind( _ seg: UIStoryboardSegue) {
+    refreshAllData()
+    allRecordingClicked = false
+  }
+
   
   
 

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="18122" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="watch44"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="18022"/>
+    </dependencies>
+    <scenes>
+        <!--CureHeart-->
+        <scene sceneID="fRD-1l-P1O">
+            <objects>
+                <controller identifier="DoneRecording" title="CureHeart" fullScreen="YES" id="IGi-cB-aGO" customClass="DoneRecordingController" customModule="CureHeartWatch_Extension">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" text="Thank you for sharing story with us" textAlignment="center" numberOfLines="2" id="ROr-An-kIL">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <label height="71" alignment="center" verticalAlignment="center" text="If you need further help, feel free to find them in our Support System" textAlignment="center" numberOfLines="5" id="f7v-pK-FZW"/>
+                        <button width="1" alignment="left" verticalAlignment="center" backgroundImage="button-done" id="fHx-02-Zdy">
+                            <connections>
+                                <action selector="doneButtonClicked" destination="IGi-cB-aGO" id="5Tz-rR-ELw"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-26.60869565217391" y="-44.017857142857146"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="button-done" width="344" height="88"/>
+    </resources>
+</document>

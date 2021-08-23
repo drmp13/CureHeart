@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="18122" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="watch44"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="18022"/>
+    </dependencies>
+    <scenes>
+        <!--CureHeart-->
+        <scene sceneID="DnI-fm-0hh">
+            <objects>
+                <controller identifier="LanguageSelection" title="CureHeart" fullScreen="YES" id="rkS-5R-11H" customClass="LanguageSelectionController" customModule="CureHeartWatch_Extension">
+                    <items>
+                        <label width="136" height="75" alignment="center" verticalAlignment="center" text="In what language do you prefer to tell your story?" textAlignment="center" numberOfLines="3" id="DIF-eL-zgV"/>
+                        <group alignment="center" verticalAlignment="center" id="U4Q-dX-Tw7">
+                            <items>
+                                <button width="80" height="45" alignment="left" backgroundImage="button-lang-en" id="1gu-Hg-YHM">
+                                    <connections>
+                                        <action selector="languageSelectedEN" destination="rkS-5R-11H" id="kzT-YY-nJU"/>
+                                    </connections>
+                                </button>
+                                <button width="80" height="45" alignment="left" backgroundImage="button-lang-id" id="tLG-6p-YSI">
+                                    <connections>
+                                        <action selector="languageSelectedID" destination="rkS-5R-11H" id="PBh-Ke-Nfa"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="buttonGroup" destination="U4Q-dX-Tw7" id="hQd-n1-qPA"/>
+                        <outlet property="buttonID" destination="tLG-6p-YSI" id="rBS-Zm-spk"/>
+                        <segue destination="Bj2-f3-BHI" kind="relationship" relationship="nextPage" id="goF-06-JN3"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="502" y="345"/>
+        </scene>
+        <!--AudioRecording-->
+        <scene sceneID="G85-rG-kun">
+            <objects>
+                <controllerPlaceholder referencedIdentifier="AudioRecording" id="Bj2-f3-BHI"/>
+            </objects>
+            <point key="canvasLocation" x="685" y="345"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="button-lang-en" width="169" height="88"/>
+        <image name="button-lang-id" width="169" height="88"/>
+    </resources>
+</document>

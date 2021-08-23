@@ -23,6 +23,27 @@
 		96121EB726B29199005B57E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96121EB626B29199005B57E7 /* SceneDelegate.swift */; };
 		96121EC126B29199005B57E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96121EC026B29199005B57E7 /* Assets.xcassets */; };
 		96121EC426B29199005B57E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96121EC226B29199005B57E7 /* LaunchScreen.storyboard */; };
+		961F3E3826CFEEAC003B7FB2 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 961F3E3626CFEEAC003B7FB2 /* Interface.storyboard */; };
+		961F3E3A26CFEEAE003B7FB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 961F3E3926CFEEAE003B7FB2 /* Assets.xcassets */; };
+		961F3E4126CFEEAF003B7FB2 /* CureHeartWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 961F3E4026CFEEAE003B7FB2 /* CureHeartWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		961F3E4626CFEEAF003B7FB2 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961F3E4526CFEEAF003B7FB2 /* InterfaceController.swift */; };
+		961F3E4826CFEEAF003B7FB2 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961F3E4726CFEEAF003B7FB2 /* ExtensionDelegate.swift */; };
+		961F3E4A26CFEEAF003B7FB2 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961F3E4926CFEEAF003B7FB2 /* NotificationController.swift */; };
+		961F3E4C26CFEEAF003B7FB2 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961F3E4B26CFEEAF003B7FB2 /* ComplicationController.swift */; };
+		961F3E4E26CFEEAF003B7FB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 961F3E4D26CFEEAF003B7FB2 /* Assets.xcassets */; };
+		961F3E5326CFEEAF003B7FB2 /* CureHeartWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 961F3E3426CFEEAC003B7FB2 /* CureHeartWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		961F3E5E26CFF1C2003B7FB2 /* SessionDelegater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961F3E5D26CFF1C2003B7FB2 /* SessionDelegater.swift */; };
+		961F3E6026CFF25B003B7FB2 /* SessionCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961F3E5F26CFF25B003B7FB2 /* SessionCommands.swift */; };
+		961F3E6226CFF274003B7FB2 /* CommandStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961F3E6126CFF274003B7FB2 /* CommandStatus.swift */; };
+		961F3E6426CFF298003B7FB2 /* PayloadDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961F3E6326CFF298003B7FB2 /* PayloadDataProvider.swift */; };
+		9626CDF826D3A0B90086CD7E /* DoneRecording.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9626CDF726D3A0B90086CD7E /* DoneRecording.storyboard */; };
+		9626CDFA26D3A1600086CD7E /* DoneRecordingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9626CDF926D3A1600086CD7E /* DoneRecordingController.swift */; };
+		9632D90A26CFF982007B0D89 /* SessionDelegater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961F3E5D26CFF1C2003B7FB2 /* SessionDelegater.swift */; };
+		9632D90B26CFF9A2007B0D89 /* SessionCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961F3E5F26CFF25B003B7FB2 /* SessionCommands.swift */; };
+		9632D90C26CFF9A4007B0D89 /* CommandStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961F3E6126CFF274003B7FB2 /* CommandStatus.swift */; };
+		9632D90D26CFF9A6007B0D89 /* PayloadDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961F3E6326CFF298003B7FB2 /* PayloadDataProvider.swift */; };
+		9632D91026CFF9FE007B0D89 /* Multiply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9632D90F26CFF9FE007B0D89 /* Multiply.swift */; };
+		9632D91126CFFA0A007B0D89 /* Multiply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9632D90F26CFF9FE007B0D89 /* Multiply.swift */; };
 		9640AC5926B69A8B00AE205F /* CureHeart.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9640AC5726B69A8B00AE205F /* CureHeart.xcdatamodeld */; };
 		9640AC5C26B6A09600AE205F /* RecordingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9640AC5B26B6A09600AE205F /* RecordingModel.swift */; };
 		9640AC5E26B6A0B900AE205F /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9640AC5D26B6A0B900AE205F /* Response.swift */; };
@@ -37,7 +58,10 @@
 		9684043826B42BB700FA0A58 /* AGAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9684043726B42BB700FA0A58 /* AGAudioPlayer.swift */; };
 		9684043A26B42BCE00FA0A58 /* AGFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9684043926B42BCE00FA0A58 /* AGFileManager.swift */; };
 		9684043E26B5619600FA0A58 /* SafePlace.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9684043D26B5619600FA0A58 /* SafePlace.storyboard */; };
-		9699B98326B9347F00F83A4A /* PathHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9699B98226B9347F00F83A4A /* PathHelper.swift */; };
+		969D8F3926D1170A004D148A /* AudioRecordingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969D8F3826D1170A004D148A /* AudioRecordingController.swift */; };
+		969D8F3B26D11E9A004D148A /* PathHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9699B98226B9347F00F83A4A /* PathHelper.swift */; };
+		969D8F3C26D11EAC004D148A /* PathHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9699B98226B9347F00F83A4A /* PathHelper.swift */; };
+		969D8F3E26D13AC9004D148A /* WatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969D8F3D26D13AC9004D148A /* WatchManager.swift */; };
 		96A0970226C12F4C00F7B42F /* NoRecommendation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96A0970126C12F4C00F7B42F /* NoRecommendation.storyboard */; };
 		96A0970426C12F7C00F7B42F /* NoRecommendationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A0970326C12F7C00F7B42F /* NoRecommendationViewController.swift */; };
 		96A4BAAE26B6A9C900727880 /* UITableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A4BAAD26B6A9C900727880 /* UITableHelper.swift */; };
@@ -50,7 +74,52 @@
 		96F9964426B8C3F700877D5B /* RecordingListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F9964226B8C3F700877D5B /* RecordingListTVC.swift */; };
 		96F9964526B8C3F700877D5B /* RecordingListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96F9964326B8C3F700877D5B /* RecordingListTVC.xib */; };
 		96F9964726B8CB6100877D5B /* RecordingListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F9964626B8CB6100877D5B /* RecordingListController.swift */; };
+		96FCE91826D1138000ECBEDA /* LanguageSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96FCE91726D1138000ECBEDA /* LanguageSelection.storyboard */; };
+		96FCE91C26D113F900ECBEDA /* AudioRecording.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96FCE91B26D113F900ECBEDA /* AudioRecording.storyboard */; };
+		96FCE92026D115FC00ECBEDA /* LanguageSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FCE91F26D115FC00ECBEDA /* LanguageSelectionController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		961F3E4226CFEEAF003B7FB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96121EA926B29198005B57E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 961F3E3F26CFEEAE003B7FB2;
+			remoteInfo = "CureHeartWatch Extension";
+		};
+		961F3E5126CFEEAF003B7FB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96121EA926B29198005B57E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 961F3E3326CFEEAC003B7FB2;
+			remoteInfo = CureHeartWatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		961F3E5426CFEEAF003B7FB2 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				961F3E5326CFEEAF003B7FB2 /* CureHeartWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		961F3E5726CFEEAF003B7FB2 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				961F3E4126CFEEAF003B7FB2 /* CureHeartWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		005BF04326B295FD00618C3A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -71,6 +140,25 @@
 		96121EC026B29199005B57E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96121EC326B29199005B57E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96121EC526B29199005B57E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		961F3E3426CFEEAC003B7FB2 /* CureHeartWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CureHeartWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		961F3E3726CFEEAC003B7FB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		961F3E3926CFEEAE003B7FB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		961F3E3B26CFEEAE003B7FB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		961F3E4026CFEEAE003B7FB2 /* CureHeartWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "CureHeartWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		961F3E4526CFEEAF003B7FB2 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		961F3E4726CFEEAF003B7FB2 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		961F3E4926CFEEAF003B7FB2 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		961F3E4B26CFEEAF003B7FB2 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		961F3E4D26CFEEAF003B7FB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		961F3E4F26CFEEAF003B7FB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		961F3E5026CFEEAF003B7FB2 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		961F3E5D26CFF1C2003B7FB2 /* SessionDelegater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDelegater.swift; sourceTree = "<group>"; };
+		961F3E5F26CFF25B003B7FB2 /* SessionCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionCommands.swift; sourceTree = "<group>"; };
+		961F3E6126CFF274003B7FB2 /* CommandStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandStatus.swift; sourceTree = "<group>"; };
+		961F3E6326CFF298003B7FB2 /* PayloadDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayloadDataProvider.swift; sourceTree = "<group>"; };
+		9626CDF726D3A0B90086CD7E /* DoneRecording.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DoneRecording.storyboard; sourceTree = "<group>"; };
+		9626CDF926D3A1600086CD7E /* DoneRecordingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneRecordingController.swift; sourceTree = "<group>"; };
+		9632D90F26CFF9FE007B0D89 /* Multiply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multiply.swift; sourceTree = "<group>"; };
 		9640AC5826B69A8B00AE205F /* RecordingModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RecordingModel.xcdatamodel; sourceTree = "<group>"; };
 		9640AC5B26B6A09600AE205F /* RecordingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingModel.swift; sourceTree = "<group>"; };
 		9640AC5D26B6A0B900AE205F /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
@@ -86,6 +174,8 @@
 		9684043926B42BCE00FA0A58 /* AGFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGFileManager.swift; sourceTree = "<group>"; };
 		9684043D26B5619600FA0A58 /* SafePlace.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SafePlace.storyboard; sourceTree = "<group>"; };
 		9699B98226B9347F00F83A4A /* PathHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathHelper.swift; sourceTree = "<group>"; };
+		969D8F3826D1170A004D148A /* AudioRecordingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecordingController.swift; sourceTree = "<group>"; };
+		969D8F3D26D13AC9004D148A /* WatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchManager.swift; sourceTree = "<group>"; };
 		96A0970126C12F4C00F7B42F /* NoRecommendation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NoRecommendation.storyboard; sourceTree = "<group>"; };
 		96A0970326C12F7C00F7B42F /* NoRecommendationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoRecommendationViewController.swift; sourceTree = "<group>"; };
 		96A4BAAD26B6A9C900727880 /* UITableHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableHelper.swift; sourceTree = "<group>"; };
@@ -98,10 +188,20 @@
 		96F9964226B8C3F700877D5B /* RecordingListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingListTVC.swift; sourceTree = "<group>"; };
 		96F9964326B8C3F700877D5B /* RecordingListTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordingListTVC.xib; sourceTree = "<group>"; };
 		96F9964626B8CB6100877D5B /* RecordingListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingListController.swift; sourceTree = "<group>"; };
+		96FCE91726D1138000ECBEDA /* LanguageSelection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LanguageSelection.storyboard; sourceTree = "<group>"; };
+		96FCE91B26D113F900ECBEDA /* AudioRecording.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AudioRecording.storyboard; sourceTree = "<group>"; };
+		96FCE91F26D115FC00ECBEDA /* LanguageSelectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		96121EAE26B29198005B57E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		961F3E3D26CFEEAE003B7FB2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -257,7 +357,10 @@
 		96121EA826B29198005B57E7 = {
 			isa = PBXGroup;
 			children = (
+				961F3E5C26CFF1A8003B7FB2 /* Shared */,
 				96121EB326B29199005B57E7 /* CureHeart */,
+				961F3E3526CFEEAC003B7FB2 /* CureHeartWatch */,
+				961F3E4426CFEEAF003B7FB2 /* CureHeartWatch Extension */,
 				96121EB226B29199005B57E7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -266,6 +369,8 @@
 			isa = PBXGroup;
 			children = (
 				96121EB126B29199005B57E7 /* CureHeart.app */,
+				961F3E3426CFEEAC003B7FB2 /* CureHeartWatch.app */,
+				961F3E4026CFEEAE003B7FB2 /* CureHeartWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -287,6 +392,57 @@
 			path = CureHeart;
 			sourceTree = "<group>";
 		};
+		961F3E3526CFEEAC003B7FB2 /* CureHeartWatch */ = {
+			isa = PBXGroup;
+			children = (
+				961F3E3626CFEEAC003B7FB2 /* Interface.storyboard */,
+				96FCE91726D1138000ECBEDA /* LanguageSelection.storyboard */,
+				96FCE91B26D113F900ECBEDA /* AudioRecording.storyboard */,
+				9626CDF726D3A0B90086CD7E /* DoneRecording.storyboard */,
+				961F3E3926CFEEAE003B7FB2 /* Assets.xcassets */,
+				961F3E3B26CFEEAE003B7FB2 /* Info.plist */,
+			);
+			path = CureHeartWatch;
+			sourceTree = "<group>";
+		};
+		961F3E4426CFEEAF003B7FB2 /* CureHeartWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				961F3E4526CFEEAF003B7FB2 /* InterfaceController.swift */,
+				96FCE91F26D115FC00ECBEDA /* LanguageSelectionController.swift */,
+				969D8F3826D1170A004D148A /* AudioRecordingController.swift */,
+				961F3E4726CFEEAF003B7FB2 /* ExtensionDelegate.swift */,
+				961F3E4926CFEEAF003B7FB2 /* NotificationController.swift */,
+				961F3E4B26CFEEAF003B7FB2 /* ComplicationController.swift */,
+				9626CDF926D3A1600086CD7E /* DoneRecordingController.swift */,
+				961F3E4D26CFEEAF003B7FB2 /* Assets.xcassets */,
+				961F3E4F26CFEEAF003B7FB2 /* Info.plist */,
+				961F3E5026CFEEAF003B7FB2 /* PushNotificationPayload.apns */,
+			);
+			path = "CureHeartWatch Extension";
+			sourceTree = "<group>";
+		};
+		961F3E5C26CFF1A8003B7FB2 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				969D8F3A26D11E87004D148A /* Helper */,
+				9632D90E26CFF9ED007B0D89 /* Entities */,
+				961F3E5D26CFF1C2003B7FB2 /* SessionDelegater.swift */,
+				961F3E5F26CFF25B003B7FB2 /* SessionCommands.swift */,
+				961F3E6126CFF274003B7FB2 /* CommandStatus.swift */,
+				961F3E6326CFF298003B7FB2 /* PayloadDataProvider.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		9632D90E26CFF9ED007B0D89 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				9632D90F26CFF9FE007B0D89 /* Multiply.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		9640AC5A26B6A06A00AE205F /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,7 +461,7 @@
 				96A4BAAD26B6A9C900727880 /* UITableHelper.swift */,
 				96A4BAAF26B6AA0B00727880 /* AlertHelper.swift */,
 				96F9963E26B82C6D00877D5B /* StringHelper.swift */,
-				9699B98226B9347F00F83A4A /* PathHelper.swift */,
+				969D8F3D26D13AC9004D148A /* WatchManager.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -402,6 +558,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		969D8F3A26D11E87004D148A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				9699B98226B9347F00F83A4A /* PathHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -412,15 +576,51 @@
 				96121EAD26B29198005B57E7 /* Sources */,
 				96121EAE26B29198005B57E7 /* Frameworks */,
 				96121EAF26B29198005B57E7 /* Resources */,
+				961F3E5426CFEEAF003B7FB2 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				961F3E5226CFEEAF003B7FB2 /* PBXTargetDependency */,
 			);
 			name = CureHeart;
 			productName = CureHeart;
 			productReference = 96121EB126B29199005B57E7 /* CureHeart.app */;
 			productType = "com.apple.product-type.application";
+		};
+		961F3E3326CFEEAC003B7FB2 /* CureHeartWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 961F3E5B26CFEEAF003B7FB2 /* Build configuration list for PBXNativeTarget "CureHeartWatch" */;
+			buildPhases = (
+				961F3E3226CFEEAC003B7FB2 /* Resources */,
+				961F3E5726CFEEAF003B7FB2 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				961F3E4326CFEEAF003B7FB2 /* PBXTargetDependency */,
+			);
+			name = CureHeartWatch;
+			productName = CureHeartWatch;
+			productReference = 961F3E3426CFEEAC003B7FB2 /* CureHeartWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		961F3E3F26CFEEAE003B7FB2 /* CureHeartWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 961F3E5A26CFEEAF003B7FB2 /* Build configuration list for PBXNativeTarget "CureHeartWatch Extension" */;
+			buildPhases = (
+				961F3E3C26CFEEAE003B7FB2 /* Sources */,
+				961F3E3D26CFEEAE003B7FB2 /* Frameworks */,
+				961F3E3E26CFEEAE003B7FB2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CureHeartWatch Extension";
+			productName = "CureHeartWatch Extension";
+			productReference = 961F3E4026CFEEAE003B7FB2 /* CureHeartWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -433,6 +633,12 @@
 				TargetAttributes = {
 					96121EB026B29198005B57E7 = {
 						CreatedOnToolsVersion = 12.5;
+					};
+					961F3E3326CFEEAC003B7FB2 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					961F3E3F26CFEEAE003B7FB2 = {
+						CreatedOnToolsVersion = 12.5.1;
 					};
 				};
 			};
@@ -450,6 +656,8 @@
 			projectRoot = "";
 			targets = (
 				96121EB026B29198005B57E7 /* CureHeart */,
+				961F3E3326CFEEAC003B7FB2 /* CureHeartWatch */,
+				961F3E3F26CFEEAE003B7FB2 /* CureHeartWatch Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -476,6 +684,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		961F3E3226CFEEAC003B7FB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96FCE91C26D113F900ECBEDA /* AudioRecording.storyboard in Resources */,
+				96FCE91826D1138000ECBEDA /* LanguageSelection.storyboard in Resources */,
+				961F3E3A26CFEEAE003B7FB2 /* Assets.xcassets in Resources */,
+				961F3E3826CFEEAC003B7FB2 /* Interface.storyboard in Resources */,
+				9626CDF826D3A0B90086CD7E /* DoneRecording.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		961F3E3E26CFEEAE003B7FB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				961F3E4E26CFEEAF003B7FB2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -483,21 +711,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9699B98326B9347F00F83A4A /* PathHelper.swift in Sources */,
+				961F3E6026CFF25B003B7FB2 /* SessionCommands.swift in Sources */,
 				9684043826B42BB700FA0A58 /* AGAudioPlayer.swift in Sources */,
 				9640AC6626B6A5BE00AE205F /* FolderCell.swift in Sources */,
 				005BF05926B2ABA800618C3A /* ListSupportSystemViewController+TableViewDataSource+TableViewDelegate.swift in Sources */,
 				005BF05226B29D0700618C3A /* ListSupportSystemViewController.swift in Sources */,
 				96A4BABA26B7E4C700727880 /* SaveRecordingController.swift in Sources */,
 				96A4BAB626B6ABCF00727880 /* SafePlaceController.swift in Sources */,
+				961F3E6426CFF298003B7FB2 /* PayloadDataProvider.swift in Sources */,
 				9684043126B4291D00FA0A58 /* RecordingController.swift in Sources */,
 				96F9964426B8C3F700877D5B /* RecordingListTVC.swift in Sources */,
 				00FA70E526B56313004D6DD3 /* DetailSupportSystemViewController.swift in Sources */,
 				96121EB526B29199005B57E7 /* AppDelegate.swift in Sources */,
 				00B5111826B7D1D100F44394 /* FetchSupportSystemData.swift in Sources */,
+				961F3E5E26CFF1C2003B7FB2 /* SessionDelegater.swift in Sources */,
 				96A4BAB026B6AA0B00727880 /* AlertHelper.swift in Sources */,
 				9640AC5E26B6A0B900AE205F /* Response.swift in Sources */,
 				9684043626B42B9F00FA0A58 /* AGAudioRecorder.swift in Sources */,
+				961F3E6226CFF274003B7FB2 /* CommandStatus.swift in Sources */,
 				9684043426B42B4200FA0A58 /* AGManager.swift in Sources */,
 				0091B07C26BE902E00522D2C /* Recommendation+TableViewDataSource+TableViewDelegate.swift in Sources */,
 				9640AC6326B6A2B400AE205F /* FolderModel.swift in Sources */,
@@ -512,10 +743,46 @@
 				96F9963F26B82C6D00877D5B /* StringHelper.swift in Sources */,
 				96121EB726B29199005B57E7 /* SceneDelegate.swift in Sources */,
 				005BF05626B2A76900618C3A /* SupportSystemCell.swift in Sources */,
+				969D8F3E26D13AC9004D148A /* WatchManager.swift in Sources */,
+				969D8F3B26D11E9A004D148A /* PathHelper.swift in Sources */,
+				9632D91126CFFA0A007B0D89 /* Multiply.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		961F3E3C26CFEEAE003B7FB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				969D8F3C26D11EAC004D148A /* PathHelper.swift in Sources */,
+				969D8F3926D1170A004D148A /* AudioRecordingController.swift in Sources */,
+				9632D91026CFF9FE007B0D89 /* Multiply.swift in Sources */,
+				9632D90B26CFF9A2007B0D89 /* SessionCommands.swift in Sources */,
+				961F3E4A26CFEEAF003B7FB2 /* NotificationController.swift in Sources */,
+				961F3E4C26CFEEAF003B7FB2 /* ComplicationController.swift in Sources */,
+				9632D90D26CFF9A6007B0D89 /* PayloadDataProvider.swift in Sources */,
+				9632D90A26CFF982007B0D89 /* SessionDelegater.swift in Sources */,
+				96FCE92026D115FC00ECBEDA /* LanguageSelectionController.swift in Sources */,
+				9626CDFA26D3A1600086CD7E /* DoneRecordingController.swift in Sources */,
+				9632D90C26CFF9A4007B0D89 /* CommandStatus.swift in Sources */,
+				961F3E4826CFEEAF003B7FB2 /* ExtensionDelegate.swift in Sources */,
+				961F3E4626CFEEAF003B7FB2 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		961F3E4326CFEEAF003B7FB2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 961F3E3F26CFEEAE003B7FB2 /* CureHeartWatch Extension */;
+			targetProxy = 961F3E4226CFEEAF003B7FB2 /* PBXContainerItemProxy */;
+		};
+		961F3E5226CFEEAF003B7FB2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 961F3E3326CFEEAC003B7FB2 /* CureHeartWatch */;
+			targetProxy = 961F3E5126CFEEAF003B7FB2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		96121EC226B29199005B57E7 /* LaunchScreen.storyboard */ = {
@@ -524,6 +791,14 @@
 				96121EC326B29199005B57E7 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		961F3E3626CFEEAC003B7FB2 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				961F3E3726CFEEAC003B7FB2 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -685,6 +960,94 @@
 			};
 			name = Release;
 		};
+		961F3E5526CFEEAF003B7FB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = AQ243C2X36;
+				IBSC_MODULE = CureHeartWatch_Extension;
+				INFOPLIST_FILE = CureHeartWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.drmp.test.CureHeart.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.3;
+			};
+			name = Debug;
+		};
+		961F3E5626CFEEAF003B7FB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = AQ243C2X36;
+				IBSC_MODULE = CureHeartWatch_Extension;
+				INFOPLIST_FILE = CureHeartWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.drmp.test.CureHeart.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.3;
+			};
+			name = Release;
+		};
+		961F3E5826CFEEAF003B7FB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = AQ243C2X36;
+				INFOPLIST_FILE = "CureHeartWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.drmp.test.CureHeart.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.3;
+			};
+			name = Debug;
+		};
+		961F3E5926CFEEAF003B7FB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = AQ243C2X36;
+				INFOPLIST_FILE = "CureHeartWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.drmp.test.CureHeart.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.3;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -702,6 +1065,24 @@
 			buildConfigurations = (
 				96121EC926B29199005B57E7 /* Debug */,
 				96121ECA26B29199005B57E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		961F3E5A26CFEEAF003B7FB2 /* Build configuration list for PBXNativeTarget "CureHeartWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				961F3E5826CFEEAF003B7FB2 /* Debug */,
+				961F3E5926CFEEAF003B7FB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		961F3E5B26CFEEAF003B7FB2 /* Build configuration list for PBXNativeTarget "CureHeartWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				961F3E5526CFEEAF003B7FB2 /* Debug */,
+				961F3E5626CFEEAF003B7FB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
