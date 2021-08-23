@@ -64,6 +64,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UuM-Rs-ASr">
+                                <rect key="frame" x="269" y="101" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -85,6 +91,7 @@
                         <outlet property="labelTitle" destination="6bo-Cz-z0H" id="74N-vT-ixQ"/>
                         <outlet property="navBar" destination="Rch-Th-N1T" id="IXV-od-BSw"/>
                         <outlet property="recordingTableView" destination="m7h-9V-IXE" id="PWA-1L-72S"/>
+                        <outlet property="textFieldFolder" destination="UuM-Rs-ASr" id="4Bf-ki-Ffe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

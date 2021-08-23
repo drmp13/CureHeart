@@ -75,6 +75,23 @@ class RecordingModel {
 
   }
 
+  func updateRecordingDataFolder(item: Recording, folder: Folder) -> ModelResponseDefault {
+    var response : ModelResponseDefault
+
+      item.setValue(folder, forKey: "parentFolder")
+      do{
+        try context.save()
+        response = ModelResponseDefault(query_status: true, message: "OK", data: nil)
+      } catch {
+        response = ModelResponseDefault(query_status: false, message: "Error: \(error)", data: nil)
+      }
+
+
+
+    return response
+
+  }
+
   func deleteRecordingData(item: Recording) -> ModelResponseDefault {
     var response : ModelResponseDefault
 
