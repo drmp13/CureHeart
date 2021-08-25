@@ -55,8 +55,10 @@
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
       notificationPayloadFile = "CureHeartWatch Extension/PushNotificationPayload.apns">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.Carousel"
+         RemotePath = "/CureHeart">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "961F3E3326CFEEAC003B7FB2"
@@ -64,7 +66,7 @@
             BlueprintName = "CureHeartWatch"
             ReferencedContainer = "container:CureHeart.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -73,8 +75,10 @@
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES"
       notificationPayloadFile = "CureHeartWatch Extension/PushNotificationPayload.apns">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.Carousel"
+         RemotePath = "/CureHeart">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "961F3E3326CFEEAC003B7FB2"
@@ -82,7 +86,16 @@
             BlueprintName = "CureHeartWatch"
             ReferencedContainer = "container:CureHeart.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "961F3E3326CFEEAC003B7FB2"
+            BuildableName = "CureHeartWatch.app"
+            BlueprintName = "CureHeartWatch"
+            ReferencedContainer = "container:CureHeart.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

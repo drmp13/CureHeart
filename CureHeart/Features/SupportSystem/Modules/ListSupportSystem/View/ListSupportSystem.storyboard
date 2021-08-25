@@ -33,39 +33,51 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="136" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dzX-z8-iDX">
-                                <rect key="frame" x="27" y="166" width="360" height="647"/>
+                                <rect key="frame" x="27" y="177.5" width="360" height="635.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="360" id="OTN-GS-7Hf"/>
                                 </constraints>
                             </tableView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="LNV-CL-DNv">
-                                <rect key="frame" x="35.5" y="104" width="343" height="33"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Support System" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weS-1S-EP0">
+                                <rect key="frame" x="27" y="112" width="360" height="33.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="FJT-Pl-Wlj"/>
-                                    <constraint firstAttribute="width" constant="343" id="oD1-q0-sjO"/>
+                                    <constraint firstAttribute="width" constant="360" id="WQG-zh-mUM"/>
                                 </constraints>
-                                <segments>
-                                    <segment title="Mental Care"/>
-                                    <segment title="Other Helps"/>
-                                </segments>
-                                <connections>
-                                    <action selector="didSelectOnSegmentedControl_SupportSystem:" destination="Y6W-OH-hqX" eventType="valueChanged" id="3jn-cT-CxJ"/>
-                                </connections>
-                            </segmentedControl>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="LNV-CL-DNv" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="1GD-Xy-ERL"/>
                             <constraint firstItem="dzX-z8-iDX" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="3gL-N9-2sh"/>
-                            <constraint firstItem="LNV-CL-DNv" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="GY5-KL-HWz"/>
+                            <constraint firstItem="weS-1S-EP0" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="24" id="Dev-oo-Ree"/>
                             <constraint firstItem="dzX-z8-iDX" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="JEN-OQ-Gns"/>
-                            <constraint firstItem="dzX-z8-iDX" firstAttribute="top" secondItem="LNV-CL-DNv" secondAttribute="bottom" constant="30" id="ier-Wb-WQ8"/>
+                            <constraint firstItem="weS-1S-EP0" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Tet-ik-lNJ"/>
+                            <constraint firstItem="dzX-z8-iDX" firstAttribute="top" secondItem="weS-1S-EP0" secondAttribute="bottom" constant="32" id="pte-KT-aV3"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Support System" image="heart.circle" catalog="system" selectedImage="heart.circle.fill" id="olB-Zl-3Xb"/>
-                    <navigationItem key="navigationItem" title="Support System" id="DnS-R2-V0D"/>
+                    <navigationItem key="navigationItem" id="DnS-R2-V0D">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="LNV-CL-DNv">
+                            <rect key="frame" x="113.5" y="6" width="187" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="FJT-Pl-Wlj"/>
+                                <constraint firstAttribute="width" constant="343" id="oD1-q0-sjO"/>
+                            </constraints>
+                            <segments>
+                                <segment title="Mental Care"/>
+                                <segment title="Other Helps"/>
+                            </segments>
+                            <connections>
+                                <action selector="didSelectOnSegmentedControl_SupportSystem:" destination="Y6W-OH-hqX" eventType="valueChanged" id="3jn-cT-CxJ"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="SegmentedControl_SupportSystem" destination="LNV-CL-DNv" id="FVu-Gl-Npx"/>

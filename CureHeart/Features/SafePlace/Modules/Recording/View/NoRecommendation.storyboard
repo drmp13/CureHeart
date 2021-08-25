@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you for sharing your story with us" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uz7-ex-mwh">
-                                <rect key="frame" x="64.5" y="156" width="285" height="69"/>
+                                <rect key="frame" x="64.5" y="148" width="285" height="69"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="69" id="9PZ-vR-KWQ"/>
                                     <constraint firstAttribute="width" constant="285" id="sKC-Gd-qlF"/>
@@ -27,30 +27,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We know it is hard to go through what you experienced, And we want you to know that you're not alone." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3d-u3-2VQ">
-                                <rect key="frame" x="49" y="325" width="316" height="41"/>
+                                <rect key="frame" x="49" y="313" width="316" height="30.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="316" id="EdI-jy-CI8"/>
-                                    <constraint firstAttribute="height" constant="41" id="bJg-DA-xLI"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="bJg-DA-xLI"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you need further help, feel free to find them in our Support System" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5o1-Ra-20k">
-                                <rect key="frame" x="58.5" y="410" width="297" height="38"/>
+                                <rect key="frame" x="58.5" y="394" width="297" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="2wj-La-Bpe"/>
                                     <constraint firstAttribute="width" constant="297" id="w60-6u-nLv"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you ever need anybody to listen, we are here for you" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBf-wD-GIC">
-                                <rect key="frame" x="49" y="359" width="316" height="23"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="23" id="7WT-MH-9Og"/>
-                                    <constraint firstAttribute="width" constant="316" id="G58-8M-0rC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                 <nil key="textColor"/>
@@ -71,8 +61,18 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We wish you all the best" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTf-f9-O4c">
-                                <rect key="frame" x="94.5" y="576" width="225" height="24"/>
+                                <rect key="frame" x="94.5" y="504" width="225" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you ever need anybody to listen, we are here for you" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBf-wD-GIC">
+                                <rect key="frame" x="49" y="351.5" width="316" height="14.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="46" id="7WT-MH-9Og"/>
+                                    <constraint firstAttribute="width" constant="316" id="G58-8M-0rC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -81,17 +81,17 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="fTf-f9-O4c" firstAttribute="centerX" secondItem="28V-ox-IbX" secondAttribute="centerX" id="1r5-My-rax"/>
-                            <constraint firstItem="fTf-f9-O4c" firstAttribute="top" secondItem="5o1-Ra-20k" secondAttribute="bottom" constant="128" id="5Ua-rt-ROb"/>
+                            <constraint firstItem="fTf-f9-O4c" firstAttribute="top" secondItem="5o1-Ra-20k" secondAttribute="bottom" constant="72" id="5Ua-rt-ROb"/>
                             <constraint firstItem="oBf-wD-GIC" firstAttribute="centerX" secondItem="28V-ox-IbX" secondAttribute="centerX" id="8Qn-Bm-VXD"/>
                             <constraint firstItem="t9T-AX-L7o" firstAttribute="bottom" secondItem="pBL-sX-JtG" secondAttribute="bottom" constant="50" id="AkE-bZ-mi1"/>
                             <constraint firstItem="5o1-Ra-20k" firstAttribute="centerX" secondItem="28V-ox-IbX" secondAttribute="centerX" id="GNc-Dj-dMP"/>
                             <constraint firstItem="t3d-u3-2VQ" firstAttribute="centerX" secondItem="28V-ox-IbX" secondAttribute="centerX" id="MeM-X2-QQi"/>
                             <constraint firstItem="uz7-ex-mwh" firstAttribute="centerX" secondItem="28V-ox-IbX" secondAttribute="centerX" id="bVO-Jo-N75"/>
-                            <constraint firstItem="t3d-u3-2VQ" firstAttribute="top" secondItem="uz7-ex-mwh" secondAttribute="bottom" constant="100" id="dvI-Zh-SHP"/>
-                            <constraint firstItem="uz7-ex-mwh" firstAttribute="top" secondItem="t9T-AX-L7o" secondAttribute="top" constant="112" id="sdn-mZ-8Tk"/>
+                            <constraint firstItem="t3d-u3-2VQ" firstAttribute="top" secondItem="uz7-ex-mwh" secondAttribute="bottom" constant="96" id="dvI-Zh-SHP"/>
+                            <constraint firstItem="oBf-wD-GIC" firstAttribute="top" secondItem="t3d-u3-2VQ" secondAttribute="bottom" constant="8" symbolic="YES" id="jVK-NC-2Ov"/>
+                            <constraint firstItem="uz7-ex-mwh" firstAttribute="top" secondItem="t9T-AX-L7o" secondAttribute="top" constant="104" id="sdn-mZ-8Tk"/>
                             <constraint firstItem="t9T-AX-L7o" firstAttribute="trailing" secondItem="pBL-sX-JtG" secondAttribute="trailing" constant="16" id="uOc-ng-g6h"/>
                             <constraint firstItem="pBL-sX-JtG" firstAttribute="leading" secondItem="t9T-AX-L7o" secondAttribute="leading" constant="16" id="uzH-dT-3g2"/>
-                            <constraint firstItem="oBf-wD-GIC" firstAttribute="top" secondItem="uz7-ex-mwh" secondAttribute="bottom" constant="134" id="wPA-Ib-BRv"/>
                             <constraint firstItem="5o1-Ra-20k" firstAttribute="top" secondItem="oBf-wD-GIC" secondAttribute="bottom" constant="28" id="zeh-AO-VGI"/>
                         </constraints>
                     </view>

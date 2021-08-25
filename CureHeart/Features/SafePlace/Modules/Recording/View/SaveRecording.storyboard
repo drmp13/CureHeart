@@ -22,7 +22,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Put your story into folder (optional)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNX-rD-xEw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Put your story into folder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNX-rD-xEw">
                                 <rect key="frame" x="87" y="382" width="240" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
@@ -36,7 +36,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LPR-RT-2eF">
-                                <rect key="frame" x="20" y="723" width="374" height="36"/>
+                                <rect key="frame" x="20" y="776" width="374" height="36"/>
                                 <color key="backgroundColor" red="0.89411764709999997" green="0.34509803919999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="HKE-O6-v30"/>
@@ -54,8 +54,8 @@
                         <constraints>
                             <constraint firstItem="mNX-rD-xEw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="87" id="0gf-my-Y1Q"/>
                             <constraint firstItem="mNX-rD-xEw" firstAttribute="top" secondItem="Xkc-Zp-MK6" secondAttribute="bottom" constant="206" id="9iB-eM-dgW"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="LPR-RT-2eF" secondAttribute="bottom" constant="50" id="HOF-yG-7km"/>
                             <constraint firstItem="Xkc-Zp-MK6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="Hhb-Gq-vUM"/>
-                            <constraint firstItem="LPR-RT-2eF" firstAttribute="top" secondItem="OeW-en-O1G" secondAttribute="bottom" constant="283" id="THm-qx-qSX"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="OeW-en-O1G" secondAttribute="trailing" constant="43" id="a1O-Xu-gIX"/>
                             <constraint firstItem="LPR-RT-2eF" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="epp-TW-p8Z"/>
                             <constraint firstItem="OeW-en-O1G" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="44" id="mJI-wq-NOT"/>

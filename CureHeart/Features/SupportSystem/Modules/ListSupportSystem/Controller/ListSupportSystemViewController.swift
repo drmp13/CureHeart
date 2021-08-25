@@ -19,7 +19,7 @@ class ListSupportSystemViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.prefersLargeTitles = false
         
         let nib = UINib(nibName: "\(SupportSystemCell.self)", bundle: nil)
         TV_SupportSystem.register(nib, forCellReuseIdentifier: "supportSystemCell")
